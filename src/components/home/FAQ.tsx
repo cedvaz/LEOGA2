@@ -1,32 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Minus, HelpCircle } from "lucide-react";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
     {
-        question: "Woher weiß ich, welche Energielösung für mein Grundstück geeignet ist?",
-        answer: "Grundsätzlich eignen sich Flächen ab ca. 1 Hektar. Wir prüfen kostenlos Ihr Grundstück und empfehlen die optimale Lösung – ob Solar, Wind oder Speicher."
+        question: "Welche Grundstücke eignen sich für erneuerbare Energieprojekte?",
+        answer: "Grundsätzlich eignen sich Flächen ab ca. 1 Hektar. Ideal sind Ackerflächen, Grünland oder Konversionsflächen. Wir prüfen kostenlos Ihr Grundstück und empfehlen die optimale Lösung."
     },
     {
-        question: "Welche Arten von erneuerbaren Energielösungen bietet LEOGA an?",
-        answer: "Wir bieten Photovoltaik-Freiflächenanlagen, Windkraftprojekte und Batteriespeicherlösungen. Jedes Projekt wird individuell auf den Standort abgestimmt."
+        question: "Was bietet LEOGA genau an?",
+        answer: "Wir bieten Photovoltaik-Freiflächenanlagen, Windkraftprojekte und Batteriespeicherlösungen. Jedes Projekt wird individuell auf den Standort und die örtlichen Gegebenheiten abgestimmt."
     },
     {
-        question: "Wie lange dauert die Installation normalerweise?",
-        answer: "Die Dauer hängt von der Projektgröße ab. Von der ersten Bewertung bis zur Inbetriebnahme rechnen wir typischerweise mit 12-24 Monaten für eine Freiflächenanlage."
+        question: "Wie lange dauert es von der Anfrage bis zur Inbetriebnahme?",
+        answer: "Von der ersten Bewertung bis zur Inbetriebnahme rechnen wir typischerweise mit 12-24 Monaten, abhängig von der Projektgröße und den Genehmigungsverfahren."
     },
     {
-        question: "Wird erneuerbare Energie meine Stromrechnung wirklich senken?",
-        answer: "Als Verpächter erhalten Sie stabile Pachteinnahmen über 20+ Jahre, die deutlich über landwirtschaftlichen Pachtpreisen liegen. Sie tragen kein unternehmerisches Risiko."
+        question: "Welche Einnahmen kann ich als Verpächter erwarten?",
+        answer: "Als Verpächter erhalten Sie stabile Pachteinnahmen über 20+ Jahre, die deutlich über den üblichen landwirtschaftlichen Pachtpreisen liegen. Sie tragen dabei kein unternehmerisches Risiko."
     },
     {
-        question: "Bieten Sie laufende Wartung und Überwachung an?",
-        answer: "Ja. Wir übernehmen den kompletten Betrieb und die Wartung über die gesamte Laufzeit. Monitoring und Instandhaltung sind in unserem Service enthalten."
+        question: "Wer kümmert sich um Wartung und Betrieb?",
+        answer: "Wir übernehmen den kompletten Betrieb und die Wartung über die gesamte Laufzeit. Monitoring, Instandhaltung und Versicherung sind in unserem Service enthalten."
     },
     {
-        question: "Wie viel kostet das gesamte System?",
-        answer: "Für Sie als Landeigentümer entstehen keine Kosten. LEOGA übernimmt alle Investitionen für Planung, Genehmigung, Bau und Betrieb."
+        question: "Entstehen mir als Landeigentümer Kosten?",
+        answer: "Nein. LEOGA übernimmt alle Investitionen für Planung, Genehmigung, Bau und Betrieb. Für Sie als Landeigentümer entstehen keinerlei Kosten."
     }
 ];
 
@@ -34,19 +34,18 @@ export function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <div className="text-center mb-12">
-                    <div className="section-label mx-auto mb-4 w-fit">
+        <section className="py-20 md:py-32 relative">
+            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                <div className="text-center mb-14">
+                    <div className="section-label mx-auto mb-5 w-fit">
                         <HelpCircle size={14} />
-                        <span>FAQ</span>
+                        <span>Häufige Fragen</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Antworten auf häufige{" "}
-                        <span className="text-primary">Fragen</span>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-4">
+                        Wir beantworten Ihre <span className="text-primary">Fragen</span>
                     </h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">
-                        Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Dienstleistungen.
+                    <p className="text-muted-foreground text-lg">
+                        Offene und ehrliche Antworten - so wie wir auch zusammenarbeiten.
                     </p>
                 </div>
 
@@ -54,34 +53,32 @@ export function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className={`rounded-xl border transition-all duration-200 ${
+                            className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                                 openIndex === index
-                                    ? "border-primary/20 bg-primary/5"
-                                    : "border-gray-100 bg-white hover:border-gray-200"
+                                    ? "border-secondary/30 bg-warm/50 shadow-sm"
+                                    : "border-warm bg-cream hover:border-secondary/20"
                             }`}
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full flex items-center justify-between p-5 text-left"
+                                className="w-full flex items-center justify-between p-5 md:p-6 text-left"
                             >
-                                <span className="text-sm font-medium text-gray-900 pr-4">{faq.question}</span>
-                                <div className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                                <span className="text-sm md:text-base font-medium text-earth pr-4">{faq.question}</span>
+                                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                                     openIndex === index
-                                        ? "bg-primary text-white"
-                                        : "bg-gray-100 text-gray-500"
+                                        ? "bg-primary text-white rotate-180"
+                                        : "bg-warm text-earth"
                                 }`}>
-                                    {openIndex === index ? (
-                                        <Minus size={14} />
-                                    ) : (
-                                        <Plus size={14} />
-                                    )}
+                                    <ChevronDown size={16} />
                                 </div>
                             </button>
-                            {openIndex === index && (
-                                <div className="px-5 pb-5 text-sm text-gray-500 leading-relaxed">
+                            <div className={`transition-all duration-300 ${
+                                openIndex === index ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                            } overflow-hidden`}>
+                                <div className="px-5 md:px-6 pb-5 md:pb-6 text-sm text-muted-foreground leading-relaxed">
                                     {faq.answer}
                                 </div>
-                            )}
+                            </div>
                         </div>
                     ))}
                 </div>

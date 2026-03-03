@@ -1,101 +1,78 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sun, Wind, Battery, Wrench, Zap } from "lucide-react";
+import { ArrowRight, Sun, Wind, Battery, Compass } from "lucide-react";
 
 const services = [
     {
         title: "Photovoltaik",
-        description: "Effiziente Solarparks im Einklang mit der Natur.",
+        description: "Sonnenenergie ernten auf Ihrem Land. Wir planen und betreiben effiziente Solarparks, die sich harmonisch in die Landschaft einfügen.",
         icon: Sun,
         href: "/photovoltaik",
         image: "/service_solar.png",
-        variant: "light" as const,
     },
     {
         title: "Windkraft",
-        description: "Kraftvolle Energieerzeugung an optimalen Standorten.",
+        description: "Die Kraft des Windes nutzen. Durchdachte Standortplanung für maximalen Ertrag bei minimalem Eingriff in die Natur.",
         icon: Wind,
         href: "/windkraft",
         image: "/service_wind.png",
-        variant: "green" as const,
     },
     {
         title: "Batteriespeicher",
-        description: "Die Zukunft der Netzstabilität und Grundlastfähigkeit.",
+        description: "Energie speichern, wenn sie gebraucht wird. Moderne Speicherlösungen für eine zuverlässige Stromversorgung rund um die Uhr.",
         icon: Battery,
         href: "/batteriespeicher",
-        variant: "green" as const,
-    },
-    {
-        title: "Beratung & Service",
-        description: "Individuelle Beratung für Ihr Energieprojekt.",
-        icon: Wrench,
-        href: "/kontakt",
-        variant: "light" as const,
+        image: "/service_battery.png",
     },
 ];
 
 export function Services() {
     return (
-        <section className="py-16 md:py-24 bg-muted">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-                    <div>
-                        <div className="section-label mb-4">
-                            <Zap size={14} />
-                            <span>Leistungen</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                            Antrieb für die Zukunft mit<br />
-                            nachhaltigen <span className="text-primary">Lösungen</span>
-                        </h2>
+        <section className="py-20 md:py-32 bg-muted relative overflow-hidden">
+            <div className="absolute -top-40 -left-40 w-80 h-80 bg-sage/10 blob-shape -z-0" />
+
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="text-center mb-16 max-w-2xl mx-auto">
+                    <div className="section-label mx-auto mb-5 w-fit">
+                        <Compass size={14} />
+                        <span>Unsere Leistungen</span>
                     </div>
-                    <p className="text-gray-500 max-w-md mt-4 md:mt-0">
-                        Wir bieten umfassende Lösungen für die Energiewende mit modernster Technologie und fairem Miteinander.
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-4 leading-tight">
+                        Drei Wege zu <span className="text-primary">sauberer Energie</span>
+                    </h2>
+                    <p className="text-muted-foreground text-lg">
+                        Jedes Grundstück ist einzigartig. Deshalb bieten wir verschiedene Lösungen, die perfekt auf Ihren Standort abgestimmt sind.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <Link
                             key={index}
                             href={service.href}
-                            className={`group block rounded-2xl overflow-hidden p-6 transition-all duration-300 hover:shadow-lg ${
-                                service.variant === "green"
-                                    ? "bg-primary text-white"
-                                    : "bg-white text-gray-900 border border-gray-100"
-                            }`}
+                            className="group block bg-cream rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
                         >
-                            {service.image && (
-                                <div className="relative rounded-xl overflow-hidden aspect-[3/2] mb-4">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
+                            <div className="relative aspect-[4/3] overflow-hidden">
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-earth/30 to-transparent" />
+                                <div className="absolute top-4 left-4 w-11 h-11 bg-cream/90 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                    <service.icon size={22} className="text-primary" />
                                 </div>
-                            )}
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 ${
-                                service.variant === "green"
-                                    ? "bg-white/20"
-                                    : "bg-green-50"
-                            }`}>
-                                <service.icon size={20} className={
-                                    service.variant === "green" ? "text-white" : "text-primary"
-                                } />
                             </div>
-                            <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                            <p className={`text-sm leading-relaxed ${
-                                service.variant === "green" ? "text-white/80" : "text-gray-500"
-                            }`}>
-                                {service.description}
-                            </p>
-                            <div className={`mt-4 flex items-center text-sm font-medium ${
-                                service.variant === "green" ? "text-white" : "text-primary"
-                            }`}>
-                                Mehr erfahren
-                                <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                            <div className="p-6">
+                                <h3 className="text-xl font-serif font-bold text-earth mb-2">{service.title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                                    {service.description}
+                                </p>
+                                <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-moss transition-colors">
+                                    Mehr erfahren
+                                    <ArrowRight size={14} className="ml-1.5 group-hover:translate-x-1 transition-transform" />
+                                </span>
                             </div>
                         </Link>
                     ))}

@@ -6,7 +6,7 @@ import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { FAQ } from "@/components/home/FAQ";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sprout } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,33 +18,50 @@ export default function Home() {
       <StoryTeaser />
       <FAQ />
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-muted">
+      {/* CTA Section - Nature style */}
+      <section className="py-20 md:py-32 bg-muted relative overflow-hidden">
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-sage/10 blob-shape" />
+
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative bg-primary rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="text-white">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Versorgen Sie Ihre Welt mit sauberer Energie
-                </h2>
-                <p className="text-white/80 mb-8 max-w-lg">
-                  Lassen Sie uns gemeinsam prüfen, wie Ihr Grundstück von erneuerbaren Energien profitieren kann. Unverbindlich und kostenlos.
-                </p>
+          <div className="relative rounded-[2rem] overflow-hidden">
+            {/* Background image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/service_wind.png"
+                alt="Windpark in der Natur"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-earth/90 via-earth/80 to-earth/50" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 p-10 md:p-16 lg:p-20 max-w-2xl">
+              <div className="inline-flex items-center gap-2 bg-cream/15 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                <Sprout size={14} className="text-accent" />
+                <span className="text-xs font-medium text-cream/80 uppercase tracking-wider">Jetzt starten</span>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mb-6 leading-tight">
+                Lassen Sie Ihr Land für die Zukunft arbeiten
+              </h2>
+              <p className="text-cream/70 mb-10 text-lg leading-relaxed max-w-lg">
+                Gemeinsam prüfen wir, wie Ihr Grundstück von erneuerbaren Energien profitieren kann. Persönlich, unverbindlich und kostenlos.
+              </p>
+              <div className="flex flex-wrap gap-4">
                 <Link
                   href="/kontakt"
-                  className="inline-flex items-center gap-2 bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-gray-100 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-accent text-earth font-medium px-7 py-3.5 rounded-full hover:bg-accent/90 transition-all text-sm shadow-lg"
                 >
-                  Jetzt Kontakt aufnehmen
+                  Kostenlos beraten lassen
                   <ArrowRight size={16} />
                 </Link>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] hidden lg:block">
-                <Image
-                  src="/service_solar.png"
-                  alt="Solarpark"
-                  fill
-                  className="object-cover"
-                />
+                <Link
+                  href="/ueber-uns"
+                  className="inline-flex items-center gap-2 bg-cream/10 backdrop-blur-sm text-cream border border-cream/20 font-medium px-7 py-3.5 rounded-full hover:bg-cream/20 transition-all text-sm"
+                >
+                  Mehr über uns
+                </Link>
               </div>
             </div>
           </div>

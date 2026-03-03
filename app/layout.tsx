@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const manrope = Manrope({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "LEOGA - Gemeinsam Erneuerbare Energien Ausbauen",
-  description: "Fair. Stabil. Nachhaltig. LEOGA ist Ihr Partner für Windkraft, Photovoltaik und Batteriespeicher. Seit über 60 Jahren.",
+  title: "LEOGA - Verwurzelt in der Region, gewachsen mit der Natur",
+  description: "Erneuerbare Energie im Einklang mit Mensch und Natur. LEOGA ist Ihr Partner für Windkraft, Photovoltaik und Batteriespeicher seit über 60 Jahren.",
 };
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-
-// ... existing imports
 
 export default function RootLayout({
   children,
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={cn(manrope.className, "antialiased min-h-screen bg-white text-gray-900 flex flex-col")}>
+      <body className={cn(dmSans.variable, playfair.variable, "antialiased min-h-screen bg-background text-foreground flex flex-col font-sans")}>
         <Header />
         <main className="flex-grow">
           {children}
@@ -32,5 +31,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-

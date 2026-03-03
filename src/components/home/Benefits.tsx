@@ -1,38 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Leaf } from "lucide-react";
+import { ArrowRight, Heart, Shield, Handshake, Leaf } from "lucide-react";
+
+const values = [
+    {
+        icon: Heart,
+        title: "Verwurzelt",
+        description: "Als Familienunternehmen verstehen wir die Bedürfnisse der Region."
+    },
+    {
+        icon: Shield,
+        title: "Verlässlich",
+        description: "Stabile Pachtverträge und transparente Konditionen seit 60+ Jahren."
+    },
+    {
+        icon: Handshake,
+        title: "Partnerschaftlich",
+        description: "Auf Augenhöhe - wir begleiten Sie durch den gesamten Prozess."
+    },
+];
 
 export function Benefits() {
     return (
-        <section className="py-16 md:py-24 bg-white">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    {/* Left - Text Content */}
-                    <div>
-                        <div className="section-label mb-6">
-                            <Leaf size={14} />
-                            <span>Über uns</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                            Unser Ziel ist es, Gemeinden und Unternehmen mit sauberer,{" "}
-                            <span className="text-primary">zuverlässiger</span> und{" "}
-                            <span className="text-primary">bezahlbarer</span> Energie zu versorgen.
-                        </h2>
-                        <p className="text-gray-500 mb-8 leading-relaxed">
-                            LEOGA ist ein Familienunternehmen mit über 60 Jahren Erfahrung. Wir verstehen die Bedürfnisse von Landeigentümern und Kommunen, weil wir selbst aus der Region kommen. Fairness, Stabilität und Nachhaltigkeit sind unsere Grundwerte.
-                        </p>
-                        <Link
-                            href="/ueber-uns"
-                            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group"
-                        >
-                            Mehr erfahren
-                            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    </div>
+        <section className="py-20 md:py-32 relative overflow-hidden">
+            {/* Subtle organic bg shape */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-warm/40 blob-shape-2 -z-10" />
 
-                    {/* Right - Image with overlay stats */}
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    {/* Left - Image stack */}
                     <div className="relative">
-                        <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                        <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3]">
                             <Image
                                 src="/story_meeting.png"
                                 alt="LEOGA Team im Gespräch"
@@ -40,15 +38,48 @@ export function Benefits() {
                                 className="object-cover"
                             />
                         </div>
-                        {/* Floating stats */}
-                        <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-5 shadow-lg">
-                            <p className="text-3xl font-bold text-primary">60+</p>
-                            <p className="text-sm text-gray-500">Jahre Erfahrung</p>
+                        {/* Organic accent shape behind */}
+                        <div className="absolute -bottom-4 -right-4 w-full h-full bg-sage/15 rounded-[2rem] -z-10" />
+                    </div>
+
+                    {/* Right - Text + Values */}
+                    <div>
+                        <div className="section-label mb-6">
+                            <Leaf size={14} />
+                            <span>Wer wir sind</span>
                         </div>
-                        <div className="absolute -top-4 -right-4 bg-primary text-white rounded-xl p-4 shadow-lg">
-                            <p className="text-2xl font-bold">200+</p>
-                            <p className="text-xs text-white/80">Partner</p>
+
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-6 leading-tight">
+                            Energie aus Überzeugung,
+                            <br />
+                            <span className="text-primary">Partnerschaft</span> aus Tradition
+                        </h2>
+
+                        <p className="text-muted-foreground mb-10 leading-relaxed text-lg">
+                            LEOGA verbindet Generationen von Erfahrung mit der Kraft erneuerbarer Energien. Wir glauben, dass die Energiewende nur gemeinsam gelingt - mit Respekt vor der Natur und den Menschen, die auf dem Land leben.
+                        </p>
+
+                        <div className="space-y-5 mb-10">
+                            {values.map((value, i) => (
+                                <div key={i} className="flex gap-4 items-start">
+                                    <div className="w-11 h-11 rounded-xl bg-warm flex items-center justify-center flex-shrink-0">
+                                        <value.icon size={20} className="text-primary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold text-earth mb-0.5">{value.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
+
+                        <Link
+                            href="/ueber-uns"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-moss transition-colors group"
+                        >
+                            Unsere ganze Geschichte
+                            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </Link>
                     </div>
                 </div>
             </div>
