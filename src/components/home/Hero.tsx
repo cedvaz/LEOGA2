@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ImageIcon } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
     return (
@@ -35,12 +36,16 @@ export function Hero() {
                         </div>
                     </div>
 
-                    {/* Right - Team photo placeholder */}
+                    {/* Right - Hero image */}
                     <div className="relative">
-                        <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-warm border-2 border-dashed border-sand flex flex-col items-center justify-center text-muted-foreground">
-                            <ImageIcon size={48} className="mb-4 opacity-30" />
-                            <p className="font-medium text-sm">Teamfoto mit Windrädern</p>
-                            <p className="text-xs mt-1 opacity-60">Platzhalter für Shooting-Bild</p>
+                        <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                            <Image
+                                src="/pictures/Alex_Hero.png"
+                                alt="LEOGA Team bei der Projektplanung vor Windkraftanlage"
+                                fill
+                                className="object-cover object-top brightness-105"
+                                priority
+                            />
                         </div>
                     </div>
                 </div>
