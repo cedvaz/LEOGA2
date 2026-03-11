@@ -4,6 +4,7 @@ import { IconServices } from "@/components/home/IconServices";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { StoryTeaser } from "@/components/home/StoryTeaser";
 import { FAQ } from "@/components/home/FAQ";
+import { ConsultationTeaser } from "@/components/home/ConsultationTeaser";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <ProcessSteps />
       <StoryTeaser />
       <FAQ />
+      <ConsultationTeaser />
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary">
