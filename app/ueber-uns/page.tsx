@@ -33,7 +33,7 @@ export default function UeberUnsPage() {
                     </div>
                     <div className="relative rounded-2xl overflow-hidden aspect-[16/7] max-w-4xl mx-auto">
                         <Image
-                            src="/pictures/Alex_überuns.png"
+                            src="/pictures/Alex_ueberuns.png"
                             alt="LEOGA Geschäftsführer im Gespräch vor Windkraftanlage"
                             fill
                             className="object-cover object-top brightness-105"
