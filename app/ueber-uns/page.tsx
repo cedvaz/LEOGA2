@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { SubpageHero } from "@/components/layout/SubpageHero";
-import { Anchor, Shield, Handshake, Heart, Scale, TreePine } from "lucide-react";
+import { Anchor, Shield, Handshake, Heart, Scale, TreePine, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Über uns – LEOGA | Verwurzelt, verlässlich, fair",
@@ -21,11 +20,28 @@ const values = [
 export default function UeberUnsPage() {
     return (
         <div className="flex flex-col min-h-screen">
-            <SubpageHero
-                title="Über uns"
-                subtitle="Energie aus Überzeugung, Partnerschaft aus Tradition."
-                imagePlaceholder="Teamfoto / Firmenbild"
-            />
+            {/* Hero mit Bild */}
+            <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 bg-cream overflow-hidden">
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-10">
+                        <h1 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-5 leading-tight">
+                            Über uns
+                        </h1>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            Energie aus Überzeugung, Partnerschaft aus Tradition.
+                        </p>
+                    </div>
+                    <div className="relative rounded-2xl overflow-hidden aspect-[16/7] max-w-4xl mx-auto">
+                        <Image
+                            src="/pictures/Alex_überuns.png"
+                            alt="LEOGA Geschäftsführer im Gespräch vor Windkraftanlage"
+                            fill
+                            className="object-cover object-top brightness-105"
+                            priority
+                        />
+                    </div>
+                </div>
+            </section>
 
             {/* Geschichte */}
             <section className="py-16 md:py-24">
