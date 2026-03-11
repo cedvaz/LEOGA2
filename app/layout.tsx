@@ -7,8 +7,8 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "LEOGA - Verwurzelt in der Region, gewachsen mit der Natur",
-  description: "Erneuerbare Energie im Einklang mit Mensch und Natur. LEOGA ist Ihr Partner für Windkraft, Photovoltaik und Batteriespeicher seit über 60 Jahren.",
+  title: "LEOGA – Energie aus Überzeugung, Partnerschaft aus Tradition",
+  description: "LEOGA entwickelt Windkraft-, Photovoltaik- und Batteriespeicherprojekte. Langfristige Partnerschaften mit Eigentümern – verwurzelt, verlässlich, fair.",
 };
 
 import { Header } from "@/components/layout/Header";

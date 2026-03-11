@@ -1,32 +1,29 @@
-import Image from "next/image";
+import { ImageIcon } from "lucide-react";
 
 interface SubpageHeroProps {
     title: string;
     subtitle?: string;
-    imageSrc: string;
+    imagePlaceholder?: string;
 }
 
-export function SubpageHero({ title, subtitle, imageSrc }: SubpageHeroProps) {
+export function SubpageHero({ title, subtitle, imagePlaceholder }: SubpageHeroProps) {
     return (
-        <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0">
-                <Image
-                    src={imageSrc}
-                    alt={title}
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-black/40" />
-            </div>
-            <div className="container relative z-10 px-4 text-center text-white">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 bg-cream overflow-hidden">
+            <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+                <h1 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-5 leading-tight">
                     {title}
                 </h1>
                 {subtitle && (
-                    <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                         {subtitle}
                     </p>
+                )}
+                {imagePlaceholder && (
+                    <div className="mt-10 rounded-2xl bg-warm border-2 border-dashed border-sand aspect-[16/7] flex flex-col items-center justify-center text-muted-foreground">
+                        <ImageIcon size={40} className="mb-3 opacity-30" />
+                        <p className="text-sm font-medium">{imagePlaceholder}</p>
+                        <p className="text-xs mt-1 opacity-60">Platzhalter für Shooting-/Drohnenbild</p>
+                    </div>
                 )}
             </div>
         </section>

@@ -1,25 +1,18 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SubpageHero } from "@/components/layout/SubpageHero";
-import {
-    Zap,
-    ShieldCheck,
-    Cpu,
-    TrendingUp,
-    CloudLightning,
-    Container,
-    ArrowRight,
-    ImageIcon
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle2, ArrowRight, ImageIcon } from "lucide-react";
 import Link from "next/link";
 
-// Simple Placeholder for Images as requested
+export const metadata: Metadata = {
+    title: "Batteriespeicher – LEOGA | Energiespeicher für die Zukunft",
+    description: "LEOGA entwickelt Batteriespeicherprojekte auf Ihren Flächen. Stabile Erträge, minimaler Flächenverbrauch und ein Beitrag zur Netzstabilität.",
+};
+
 const ImagePlaceholder = ({ text }: { text: string }) => (
-    <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center text-gray-400 p-8 text-center border-2 border-dashed border-gray-200 rounded-3xl group-hover:bg-gray-200 transition-colors">
-        <ImageIcon size={48} className="mb-4 opacity-20" />
+    <div className="w-full h-full bg-warm flex flex-col items-center justify-center text-muted-foreground p-8 text-center border-2 border-dashed border-sand rounded-2xl">
+        <ImageIcon size={40} className="mb-3 opacity-25" />
         <p className="font-medium text-sm">{text}</p>
-        <p className="text-xs mt-2 opacity-50">Hier Bild hochladen</p>
+        <p className="text-xs mt-1 opacity-50">Platzhalter für Bild</p>
     </div>
 );
 
@@ -28,172 +21,85 @@ export default function BatteriespeicherPage() {
         <div className="flex flex-col min-h-screen">
             <SubpageHero
                 title="Batteriespeicher"
-                subtitle="Das fehlende Puzzleteil der Energiewende. Wir ermöglichen Stabilität und maximale Erträge."
-                imageSrc="/service_battery.png"
+                subtitle="Energiespeicher machen die Energiewende verlässlich. Wir entwickeln Speicherprojekte auf Ihren Flächen."
+                imagePlaceholder="Batteriespeicher-Anlage / Projektfoto"
             />
 
-            {/* Mission Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="text-center mb-12">
-                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Die Rolle der Speicher</span>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
-                            Das fehlende Puzzleteil in der Energiewende
-                        </h2>
-                        <div className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8" />
-                    </div>
-
-                    <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed">
-                        <p className="mb-6">
-                            Die Energiewende steht vor einer gewaltigen Herausforderung: Wind und Sonne liefern Strom oft dann, wenn wir ihn am wenigsten brauchen – und fehlen dann, wenn die Last im Netz am höchsten ist. Hier kommen Großbatteriespeicher (BESS) ins Spiel.
-                        </p>
-                        <p>
-                            Batteriespeichersysteme speichern vor allem Wind- und Solarstrom, der zum Zeitpunkt der Erzeugung nicht direkt ins Netz eingespeist werden kann. Der gespeicherte Strom wird zeitversetzt wieder abgegeben – meist in den Abendstunden, wenn der Verbrauch privater Haushalte und der Industrie besonders hoch ist.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* How it Works / Grid Stability */}
-            <section className="py-24 bg-gray-50 border-y border-gray-100">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Intro */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Stabilität fürs Netz & Wirtschaftlichkeit</h3>
-                            <p className="text-gray-600 mb-8 leading-relaxed">
-                                Batteriespeicher machen das deutsche Stromnetz flexibler. Sie balancieren Angebot und Nachfrage in Millisekunden aus. Das reduziert den Bedarf an teuren fossilen Kraftwerken und ermöglicht eine unabhängige Energieversorgung.
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
+                                Speicher für eine <span className="text-primary">stabile Zukunft</span>
+                            </h2>
+                            <p className="text-muted-foreground leading-relaxed mb-4">
+                                Wind und Sonne liefern nicht immer dann Strom, wenn er gebraucht wird. Batteriespeicher schließen diese Lücke – sie speichern überschüssige Energie und geben sie ab, wenn die Nachfrage hoch ist.
                             </p>
-
-                            <div className="space-y-6">
-                                <div className="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                                        <TrendingUp className="text-primary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">Peak Shaving</h4>
-                                        <p className="text-sm text-gray-500">Kappung von Lastspitzen zur Entlastung regionaler Netzknoten und zur Vermeidung von Netzausbaukosten.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                                        <CloudLightning className="text-primary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">Regelleistung</h4>
-                                        <p className="text-sm text-gray-500">Erbringung wertvoller Netzdienstleistungen zur Frequenzhaltung – bezahlt durch die Übertragungsnetzbetreiber.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Für Flächeneigentümer bieten Speicherprojekte attraktive Pachteinnahmen bei minimalem Flächenverbrauch. Schon kleine Grundstücke ab 0,5 Hektar können geeignet sein.
+                            </p>
                         </div>
-
-                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm group">
-                            <ImagePlaceholder text="Bild: Großbatteriespeicher Anlage (BESS)" />
+                        <div className="aspect-[4/3]">
+                            <ImagePlaceholder text="Großbatteriespeicher (BESS)" />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Technical Detail Section */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold mb-4">Aufbau eines Batterieparks</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto">Technisch komplexe Systeme, sicher und effizient integriert.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Was wir bieten */}
+            <section className="py-16 md:py-24 bg-cream">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-10 text-center">
+                        Was Sie von uns erwarten können
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            {
-                                icon: Container,
-                                title: "20ft Schiffscontainer",
-                                text: "Die Batteriemodule sind sicher in 20-Fuß-Racks untergebracht (ca. 4-6 MWh pro Einheit)."
-                            },
-                            {
-                                icon: Cpu,
-                                title: "Steuerungssysteme",
-                                text: "Smart-Grid-Software steuert Ladung und Entladung bedarfsgerecht in Echtzeit."
-                            },
-                            {
-                                icon: Zap,
-                                title: "Bidirektional",
-                                text: "Bidirektionale Stromrichter ermöglichen den Energiefluss in beide Richtungen (DC/AC)."
-                            },
-                            {
-                                icon: ShieldCheck,
-                                title: "Brandschutz",
-                                text: "Integrierte Lösch- und Kühlsysteme garantieren höchste Sicherheitsstandards."
-                            }
+                            { title: "Standortprüfung", text: "Kostenlose Prüfung Ihrer Fläche hinsichtlich Netzanschluss und Eignung für Speicherprojekte." },
+                            { title: "Minimaler Flächenbedarf", text: "Batteriespeicher benötigen wenig Platz – schon kleine Grundstücke können große Wirkung erzielen." },
+                            { title: "Netzstabilität", text: "Speicher balancieren Angebot und Nachfrage aus und tragen zur Versorgungssicherheit bei." },
+                            { title: "Stabile Erträge", text: "Langfristige Pachtverträge mit verlässlichen Einnahmen über die gesamte Laufzeit." },
+                            { title: "Sicherheitsstandards", text: "Integrierte Brand- und Kühlsysteme nach höchsten Sicherheitsnormen." },
+                            { title: "Komplette Betreuung", text: "Planung, Bau, Betrieb und Monitoring – wir kümmern uns um alles." },
                         ].map((item, i) => (
-                            <div key={i} className="flex flex-col items-center text-center">
-                                <div className="w-16 h-16 bg-primary/5 text-primary rounded-full flex items-center justify-center mb-6">
-                                    <item.icon size={32} />
+                            <div key={i} className="flex gap-4 items-start bg-white rounded-xl p-5">
+                                <CheckCircle2 size={20} className="text-primary mt-0.5 shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold text-earth mb-1">{item.title}</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
                                 </div>
-                                <h4 className="font-bold text-gray-900 mb-3">{item.title}</h4>
-                                <p className="text-sm text-gray-500 leading-relaxed">{item.text}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Fact Box / Calculation Example */}
-            <section className="py-24 bg-primary text-white overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2" />
-                <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 italic opacity-20 hidden lg:block">The Power of Storage</h2>
-                            <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] border border-white/20">
-                                <h3 className="text-2xl md:text-3xl font-bold mb-6">Energie für ganze Gemeinden</h3>
-                                <p className="text-white/80 mb-8 leading-relaxed">
-                                    Schon kleine Flächen erzielen enorme Wirkung. Ein typischer Speicher mit 100 MW Leistung und 200 MWh Kapazität kann rechnerisch:
-                                </p>
+            {/* Partnerschaft */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6">
+                        Zukunftstechnologie, bodenständig umgesetzt
+                    </h2>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                        Batteriespeicher sind technisch anspruchsvoll – aber die Zusammenarbeit mit uns ist es nicht. Wir erklären verständlich, planen vorausschauend und begleiten Sie persönlich. Das ist unser Anspruch.
+                    </p>
+                </div>
+            </section>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    <div className="border-l-2 border-secondary pl-6">
-                                        <span className="text-4xl font-bold block mb-1">175.000</span>
-                                        <span className="text-white/60 text-sm uppercase tracking-wider">3-Personen-Haushalte</span>
-                                    </div>
-                                    <div className="border-l-2 border-secondary pl-6">
-                                        <span className="text-4xl font-bold block mb-1">2 Std.</span>
-                                        <span className="text-white/60 text-sm uppercase tracking-wider">Volllast-Versorgung</span>
-                                    </div>
-                                </div>
-
-                                <p className="mt-10 text-xs text-white/40 italic">
-                                    *Basierend auf einem durchschnittlichen Jahresverbrauch von 5.000 kWh pro Haushalt.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="space-y-8">
-                            <h3 className="text-3xl font-bold italic">Flächen-Profil</h3>
-                            <div className="space-y-6">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-2 h-2 rounded-full bg-secondary" />
-                                    <p className="text-lg">Bedarf ab ca. <span className="text-secondary font-bold">0,5 - 1 Hektar</span></p>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-2 h-2 rounded-full bg-secondary" />
-                                    <p className="text-lg">Nähe zu <span className="text-secondary font-bold">Umspannwerken</span> oder starken Leitungen</p>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-2 h-2 rounded-full bg-secondary" />
-                                    <p className="text-lg"><span className="text-secondary font-bold">Maximale Pacht</span> bei minimaler Flächenversiegelung</p>
-                                </div>
-                            </div>
-
-                            <div className="pt-8">
-                                <Link href="/kontakt">
-                                    <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-bold px-10 rounded-full h-14 group text-lg">
-                                        Fläche prüfen lassen
-                                        <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                                    </Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+            {/* CTA */}
+            <section className="py-16 md:py-24 bg-primary">
+                <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Fläche für Batteriespeicher?</h2>
+                    <p className="text-white/80 mb-8 text-lg">
+                        Wir prüfen kostenfrei, ob Ihr Grundstück für ein Speicherprojekt geeignet ist.
+                    </p>
+                    <Link
+                        href="/kontakt"
+                        className="inline-flex items-center gap-2 bg-white text-primary font-medium px-8 py-3.5 rounded-full hover:bg-cream transition-all shadow-lg"
+                    >
+                        Kontakt aufnehmen
+                        <ArrowRight size={16} />
+                    </Link>
                 </div>
             </section>
         </div>

@@ -5,28 +5,28 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
     {
-        question: "Welche Grundstücke eignen sich für erneuerbare Energieprojekte?",
-        answer: "Grundsätzlich eignen sich Flächen ab ca. 1 Hektar. Ideal sind Ackerflächen, Grünland oder Konversionsflächen. Wir prüfen kostenlos Ihr Grundstück und empfehlen die optimale Lösung."
+        question: "Welche Flächen eignen sich für eine Zusammenarbeit?",
+        answer: "Grundsätzlich Flächen ab ca. 1 Hektar – Acker, Grünland oder Konversionsflächen. Wir prüfen Ihr Grundstück kostenlos und unverbindlich und besprechen gemeinsam die Möglichkeiten."
     },
     {
-        question: "Was bietet LEOGA genau an?",
-        answer: "Wir bieten Photovoltaik-Freiflächenanlagen, Windkraftprojekte und Batteriespeicherlösungen. Jedes Projekt wird individuell auf den Standort und die örtlichen Gegebenheiten abgestimmt."
+        question: "Was macht LEOGA anders als andere Projektierer?",
+        answer: "Wir sind ein Familienunternehmen und denken in Generationen, nicht in Quartalszahlen. Bei uns haben Sie einen persönlichen Ansprechpartner, der Sie über die gesamte Laufzeit begleitet. Wir versprechen nur, was wir halten können."
     },
     {
-        question: "Wie lange dauert es von der Anfrage bis zur Inbetriebnahme?",
-        answer: "Von der ersten Bewertung bis zur Inbetriebnahme rechnen wir typischerweise mit 12-24 Monaten, abhängig von der Projektgröße und den Genehmigungsverfahren."
+        question: "Wie lange dauert es von der Anfrage bis zur Umsetzung?",
+        answer: "Je nach Projekt und Genehmigungslage rechnen wir mit 12 bis 24 Monaten. Wir halten Sie in jedem Schritt auf dem Laufenden und arbeiten zügig, aber gründlich."
     },
     {
-        question: "Welche Einnahmen kann ich als Verpächter erwarten?",
-        answer: "Als Verpächter erhalten Sie stabile Pachteinnahmen über 20+ Jahre, die deutlich über den üblichen landwirtschaftlichen Pachtpreisen liegen. Sie tragen dabei kein unternehmerisches Risiko."
+        question: "Entstehen mir als Eigentümer Kosten?",
+        answer: "Nein. LEOGA übernimmt sämtliche Kosten für Planung, Genehmigung, Bau und Betrieb. Für Sie als Eigentümer entstehen keine Kosten – Sie erhalten Pachteinnahmen."
     },
     {
         question: "Wer kümmert sich um Wartung und Betrieb?",
-        answer: "Wir übernehmen den kompletten Betrieb und die Wartung über die gesamte Laufzeit. Monitoring, Instandhaltung und Versicherung sind in unserem Service enthalten."
+        answer: "Wir übernehmen den kompletten Betrieb über die gesamte Laufzeit. Monitoring, Wartung und Instandhaltung gehören zu unserem Service. Sie haben keinen Aufwand."
     },
     {
-        question: "Entstehen mir als Landeigentümer Kosten?",
-        answer: "Nein. LEOGA übernimmt alle Investitionen für Planung, Genehmigung, Bau und Betrieb. Für Sie als Landeigentümer entstehen keinerlei Kosten."
+        question: "Kann ich die Fläche nach Vertragsende wieder nutzen?",
+        answer: "Ja. Wir hinterlegen Rückbaubürgschaften und stellen die Fläche nach Laufzeitende in den Ursprungszustand zurück. Das ist vertraglich gesichert."
     }
 ];
 
@@ -34,7 +34,7 @@ export function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-20 md:py-32 relative">
+        <section className="py-20 md:py-28">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
                 <div className="text-center mb-14">
                     <div className="section-label mx-auto mb-5 w-fit">
@@ -42,10 +42,10 @@ export function FAQ() {
                         <span>Häufige Fragen</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-4">
-                        Wir beantworten Ihre <span className="text-primary">Fragen</span>
+                        Offene Antworten auf <span className="text-primary">Ihre Fragen</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        Offene und ehrliche Antworten - so wie wir auch zusammenarbeiten.
+                        Ehrlich und direkt – so arbeiten wir auch zusammen.
                     </p>
                 </div>
 
@@ -55,8 +55,8 @@ export function FAQ() {
                             key={index}
                             className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                                 openIndex === index
-                                    ? "border-secondary/30 bg-warm/50 shadow-sm"
-                                    : "border-warm bg-cream hover:border-secondary/20"
+                                    ? "border-primary/20 bg-warm/50 shadow-sm"
+                                    : "border-sand bg-cream hover:border-primary/15"
                             }`}
                         >
                             <button

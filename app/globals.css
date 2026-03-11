@@ -1,29 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Nature/Organic palette - earthy, warm tones */
-  --color-primary: #2d5016;
-  --color-secondary: #8b6f47;
-  --color-accent: #c4a265;
-  --color-warm: #e8dcc8;
-  --color-earth: #3d2b1f;
-  --color-sage: #7a8b6f;
-  --color-moss: #4a6741;
-  --color-cream: #faf6f0;
+  /* Sand & Green palette – ruhig, natürlich, kein dunkles Braun */
+  --color-primary: #4a7c59;
+  --color-secondary: #6b9e78;
+  --color-accent: #c8a97e;
+  --color-warm: #ede5d8;
+  --color-earth: #1e352a;
+  --color-sage: #8a9e83;
+  --color-moss: #5a8a62;
+  --color-cream: #faf7f2;
+  --color-sand: #d4c4a8;
 
-  --color-muted: #f5f0e8;
-  --color-muted-foreground: #6b6156;
+  --color-muted: #f3ede4;
+  --color-muted-foreground: #6b7064;
 
-  --color-background: #fdfbf7;
-  --color-foreground: #2c2418;
+  --color-background: #fdfbf8;
+  --color-foreground: #2d3b2e;
 
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
 }
 
 :root {
-  --background: #fdfbf7;
-  --foreground: #2c2418;
+  --background: #fdfbf8;
+  --foreground: #2d3b2e;
 }
 
 body {
@@ -32,7 +33,7 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Section label - organic leaf style */
+/* Section label */
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -41,9 +42,9 @@ body {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #4a6741;
-  background-color: #f0ebe0;
-  border: 1px solid #e0d8c8;
+  color: #4a7c59;
+  background-color: #ede5d8;
+  border: 1px solid #d4c4a8;
   padding: 0.375rem 1rem;
   border-radius: 9999px;
 }
@@ -81,13 +82,4 @@ body {
 
 .icon-card:hover .read-more-arrow {
   transform: translateX(4px);
-}
-
-/* Organic blob shapes */
-.blob-shape {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-.blob-shape-2 {
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }

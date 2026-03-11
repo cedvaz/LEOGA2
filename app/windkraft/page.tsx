@@ -1,27 +1,18 @@
-"use client";
-
+import type { Metadata } from "next";
 import { SubpageHero } from "@/components/layout/SubpageHero";
-import {
-    CheckCircle2,
-    Wind,
-    Map,
-    ShieldCheck,
-    Zap,
-    Globe,
-    Users,
-    ArrowRight,
-    TrendingUp,
-    ImageIcon
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle2, ArrowRight, ImageIcon } from "lucide-react";
 import Link from "next/link";
 
-// Simple Placeholder for Images as requested
+export const metadata: Metadata = {
+    title: "Windkraft – LEOGA | Windkraftprojekte in Partnerschaft",
+    description: "LEOGA entwickelt Windkraftprojekte gemeinsam mit Flächeneigentümern. Verantwortungsvolle Planung, faire Konditionen und langfristige Begleitung.",
+};
+
 const ImagePlaceholder = ({ text }: { text: string }) => (
-    <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center text-gray-400 p-8 text-center border-2 border-dashed border-gray-200 rounded-3xl group-hover:bg-gray-200 transition-colors">
-        <ImageIcon size={48} className="mb-4 opacity-20" />
+    <div className="w-full h-full bg-warm flex flex-col items-center justify-center text-muted-foreground p-8 text-center border-2 border-dashed border-sand rounded-2xl">
+        <ImageIcon size={40} className="mb-3 opacity-25" />
         <p className="font-medium text-sm">{text}</p>
-        <p className="text-xs mt-2 opacity-50">Hier Bild hochladen</p>
+        <p className="text-xs mt-1 opacity-50">Platzhalter für Bild</p>
     </div>
 );
 
@@ -30,162 +21,87 @@ export default function WindkraftPage() {
         <div className="flex flex-col min-h-screen">
             <SubpageHero
                 title="Windkraft"
-                subtitle="Die Kraft des Windes effizient nutzen. Wir schaffen Mehrwert für Sie und Ihre Region."
-                imageSrc="/wind_hero.png"
+                subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
+                imagePlaceholder="Windpark-Panorama / Drohnenbild"
             />
 
-            {/* Mission: Efficiency & Local Value */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Effizienz an Land</span>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
-                        Der stärkste Motor der Energiewende
-                    </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                        Windkraftanlagen sind die effizienteste Form der erneuerbaren Stromerzeugung an Land. Keine andere Technologie liefert auf so kleiner Grundfläche so viel sauberen Strom. LEOGA entwickelt Windkraft-Projekte, die technologische Höchstleistung mit maximaler Rücksicht auf Mensch und Natur verbinden.
-                    </p>
-                    <div className="h-1.5 w-24 bg-primary mx-auto rounded-full" />
-                </div>
-            </section>
-
-            {/* Deep Content: Artenschutz & Umwelt */}
-            <section className="py-24 bg-gray-900 text-white overflow-hidden">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Intro */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h3 className="text-secondary font-bold uppercase tracking-wider mb-4 text-sm">Verantwortung</h3>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">Im Einklang mit der Natur</h2>
-
-                            <div className="space-y-8">
-                                <div className="flex gap-5">
-                                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                        <Globe className="text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold mb-2 text-xl">Artenschutz-Konzepte</h4>
-                                        <p className="text-white/60">Modernste Detektionssysteme (z.B. kamerabasierte Abschaltsysteme) schützen Vögel und Fledermäuse während der Flugzeiten. Wir setzen auf Vermeidungsmaßnahmen statt bloßer Kompensation.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-5">
-                                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                        <ShieldCheck className="text-secondary" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold mb-2 text-xl">Rückbaubürgschaft</h4>
-                                        <p className="text-white/60">Für jede Anlage hinterlegen wir bereits vor Baubeginn bankübliche Sicherheiten für den vollständigen Rückbau inklusive Fundamente. Die Fläche kehrt nach der Laufzeit in den Ursprungzustand zurück.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="relative aspect-square rounded-[3rem] overflow-hidden border-8 border-white/5 group">
-                            <ImagePlaceholder text="Bild: Modernes Windrad in der Natur" />
-                            <div className="absolute inset-x-8 bottom-8 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-                                <p className="font-bold text-xl mb-1 text-secondary">Nachhaltigkeit garantiert</p>
-                                <p className="text-sm text-white/80">Vollständige Kreislaufwirtschaft beim Rückbau der Rotorblätter.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Technical Detail: Modern Turbines */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold mb-4">Anlagentechnik der nächsten Generation</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto">Mehr Ertrag, weniger Belastung. Wir nutzen die technologische Evolution für leisere und effizientere Windparks.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        <div className="p-8 border border-gray-100 rounded-3xl hover:border-primary/20 transition-colors shadow-sm">
-                            <Wind className="text-primary mb-6" size={40} />
-                            <h4 className="text-xl font-bold mb-4">Schwachwind-Optimierung</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed">Größere Rotordurchmesser ermöglichen rentable Erträge auch an Standorten mit mäßigen Windgeschwindigkeiten.</p>
-                        </div>
-                        <div className="p-8 border border-gray-100 rounded-3xl hover:border-primary/20 transition-colors shadow-sm">
-                            <Zap className="text-primary mb-6" size={40} />
-                            <h4 className="text-xl font-bold mb-4">Intelligente Steuerung</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed">Schattenwurf-Abschaltung und schallreduzierter Betrieb in der Nacht sorgen für maximale Akzeptanz in der Nachbarschaft.</p>
-                        </div>
-                        <div className="p-8 border border-gray-100 rounded-3xl hover:border-primary/20 transition-colors shadow-sm">
-                            <TrendingUp className="text-primary mb-6" size={40} />
-                            <h4 className="text-xl font-bold mb-4">Maximale Verfügbarkeit</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed">Prädiktive Wartung durch KI-basierte Sensorik (Predictive Maintenance) minimiert Stillstandzeiten.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Partnership: Value for Communities */}
-            <section className="py-24 bg-gray-50 border-y border-gray-200">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="order-2 lg:order-1">
-                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100">
-                                <h3 className="text-2xl font-bold mb-8 text-gray-900">Gemeinsam profitieren</h3>
-                                <div className="space-y-6">
-                                    <div className="flex gap-4 items-start">
-                                        <Users className="text-primary mt-1" size={24} />
-                                        <div>
-                                            <p className="font-bold">Bürgerbeteiligung</p>
-                                            <p className="text-sm text-gray-500">Wir bieten Anwohnern direkte Beteiligungsmodelle oder vergünstigte Stromtarife an.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 items-start">
-                                        <TrendingUp className="text-primary mt-1" size={24} />
-                                        <div>
-                                            <p className="font-bold">Kommunale Steuern</p>
-                                            <p className="text-sm text-gray-500">90% der Gewerbesteuer verbleiben direkt in der Standortgemeinde.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 items-start">
-                                        <Map className="text-primary mt-1" size={24} />
-                                        <div>
-                                            <p className="font-bold">Akzeptanzabgabe</p>
-                                            <p className="text-sm text-gray-500">Direkte finanzielle Förderung der Kommunen nach § 6 EEG (0,2 Cent pro kWh).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="order-1 lg:order-2">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">Partnerschaft auf Augenhöhe</h2>
-                            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                Ein Windpark ist ein Langzeitprojekt über 25 bis 30 Jahre. Wir sehen uns nicht nur als Projektentwickler, sondern als Partner der Region. Das bedeutet Transparenz von Tag eins.
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
+                                Windkraft, die zur <span className="text-primary">Region passt</span>
+                            </h2>
+                            <p className="text-muted-foreground leading-relaxed mb-4">
+                                Windenergie ist ein wichtiger Baustein der Energiewende. Für uns ist sie mehr als Technik – sie ist eine Verantwortung gegenüber den Menschen und der Landschaft vor Ort.
                             </p>
-                            <ul className="space-y-4 mb-10">
-                                {[
-                                    "Faire Pachtverträge mit Indexierung",
-                                    "Keine Beeinträchtigung der Landwirtschaft um den Mast",
-                                    "Lokale Wertschöpfung durch regionale Partner",
-                                    "Vertrauensvolle Zusammenarbeit mit Kommunen"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3">
-                                        <CheckCircle2 size={20} className="text-secondary" />
-                                        <span className="text-lg font-medium">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Wir planen Windkraftprojekte mit Bedacht: Standortwahl, Artenschutz und die Einbindung der Gemeinde stehen von Anfang an im Mittelpunkt. Denn ein Windrad steht für Jahrzehnte – genau wie unsere Partnerschaft mit Ihnen.
+                            </p>
+                        </div>
+                        <div className="aspect-[4/3]">
+                            <ImagePlaceholder text="Windkraftanlage in der Landschaft" />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Was wir bieten */}
+            <section className="py-16 md:py-24 bg-cream">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-10 text-center">
+                        Was Sie von uns erwarten können
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            { title: "Standortprüfung", text: "Kostenlose Prüfung Ihrer Fläche hinsichtlich Windpotenzial, Abstände und Netzanschluss." },
+                            { title: "Genehmigungsverfahren", text: "Wir übernehmen alle behördlichen Schritte – von der Umweltverträglichkeit bis zur Baugenehmigung." },
+                            { title: "Artenschutz", text: "Moderne Detektionssysteme und durchdachte Vermeidungsmaßnahmen für Vögel und Fledermäuse." },
+                            { title: "Faire Pachtverträge", text: "Transparente Konditionen mit Indexierung. Keine versteckten Klauseln, keine bösen Überraschungen." },
+                            { title: "Rückbaubürgschaft", text: "Bankübliche Sicherheiten für den vollständigen Rückbau – hinterlegt vor Baubeginn." },
+                            { title: "Langfristige Betreuung", text: "Monitoring, Wartung und persönlicher Ansprechpartner über die gesamte Laufzeit." },
+                        ].map((item, i) => (
+                            <div key={i} className="flex gap-4 items-start bg-white rounded-xl p-5">
+                                <CheckCircle2 size={20} className="text-primary mt-0.5 shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold text-earth mb-1">{item.title}</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Partnerschaft */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6">
+                        Partnerschaft auf Augenhöhe
+                    </h2>
+                    <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                        Ein Windkraftprojekt ist ein Langzeitvorhaben über 25 Jahre und mehr. Deshalb sehen wir uns nicht nur als Projektierer, sondern als verlässlichen Partner der Region.
+                    </p>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                        Transparenz von Tag eins, faire Verträge und regionale Wertschöpfung – das ist unser Versprechen.
+                    </p>
                 </div>
             </section>
 
             {/* CTA */}
-            <section className="py-24 bg-primary text-white text-center">
-                <div className="container mx-auto px-4 max-w-3xl">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">Haben Sie einen geeigneten Wind-Standort?</h2>
-                    <p className="text-xl text-white/80 mb-12">
-                        Wir prüfen kostenfrei und diskret die Potenziale Ihrer Fläche hinsichtlich Abstandsflächen, Netzanschluss und Ertragsprognose.
+            <section className="py-16 md:py-24 bg-primary">
+                <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Haben Sie einen möglichen Standort?</h2>
+                    <p className="text-white/80 mb-8 text-lg">
+                        Wir prüfen Ihre Fläche kostenfrei und unverbindlich. Persönlich und diskret.
                     </p>
-                    <Link href="/kontakt">
-                        <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-12 h-14 rounded-full font-bold shadow-2xl group text-lg">
-                            Fläche jetzt prüfen lassen
-                            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                    <Link
+                        href="/kontakt"
+                        className="inline-flex items-center gap-2 bg-white text-primary font-medium px-8 py-3.5 rounded-full hover:bg-cream transition-all shadow-lg"
+                    >
+                        Kontakt aufnehmen
+                        <ArrowRight size={16} />
                     </Link>
                 </div>
             </section>

@@ -1,84 +1,87 @@
+import type { Metadata } from "next";
 import { SubpageHero } from "@/components/layout/SubpageHero";
-import { History, Heart, Users, Shield, Target, Leaf } from "lucide-react";
+import { Anchor, Shield, Handshake, Heart, Scale, TreePine } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Über uns – LEOGA | Verwurzelt, verlässlich, fair",
+    description: "LEOGA ist ein Familienunternehmen für erneuerbare Energien. Unsere Werte: verwurzelt, verlässlich, partnerschaftlich, nachhaltig, fair, stabil.",
+};
+
+const values = [
+    { icon: Anchor, title: "Verwurzelt", text: "Als Familienunternehmen kennen wir die Region und die Menschen. Wir sind Teil der Gemeinschaft, nicht nur Geschäftspartner." },
+    { icon: Shield, title: "Verlässlich", text: "Wir stehen zu unseren Zusagen. Was wir versprechen, halten wir – über Jahrzehnte hinweg." },
+    { icon: Handshake, title: "Partnerschaftlich", text: "Wir arbeiten auf Augenhöhe. Ihre Interessen sind auch unsere Interessen." },
+    { icon: TreePine, title: "Nachhaltig", text: "Nachhaltigkeit ist für uns kein Schlagwort, sondern unser täglicher Antrieb." },
+    { icon: Heart, title: "Fair", text: "Transparente Konditionen, ehrliche Beratung und keine versteckten Klauseln." },
+    { icon: Scale, title: "Stabil", text: "Wir sind krisenfest. Ein Familienunternehmen, das langfristig denkt und handelt." },
+];
 
 export default function UeberUnsPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <SubpageHero
                 title="Über uns"
-                subtitle="60 Jahre Erfahrung. Ein Familienunternehmen mit Wurzeln und Vision."
-                imageSrc="/story_meeting.png"
+                subtitle="Energie aus Überzeugung, Partnerschaft aus Tradition."
+                imagePlaceholder="Teamfoto / Firmenbild"
             />
 
-            {/* Philosophy Section */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">Fairness ist unser <span className="text-primary italic">Fundament.</span></h2>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                LEOGA wurde mit dem Ziel gegründet, die Energiewende dort voranzutreiben, wo sie stattfindet: In der Region, auf dem Land, im Dialog mit den Menschen. Als Familienunternehmen blicken wir auf eine 60-jährige Geschichte zurück, die von handwerklichem Geschick, unternehmerischem Mut und verlässlichen Partnerschaften geprägt ist.
-                            </p>
-                            <p className="text-lg text-gray-600 leading-relaxed">
-                                Wir verstehen uns nicht als kurzfristige Projektentwickler, sondern als langfristige Begleiter Ihrer Energieprojekte. Wenn wir einen Pachtvertrag unterschreiben, dann ist das der Beginn einer 25-jährigen Partnerschaft.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="aspect-square bg-primary/5 rounded-3xl p-8 flex flex-col justify-end">
-                                <History className="text-primary mb-4" size={32} />
-                                <p className="font-bold text-gray-900">Tradition</p>
-                                <p className="text-sm text-gray-500">Seit 60 Jahren am Markt</p>
-                            </div>
-                            <div className="aspect-square bg-secondary/5 rounded-3xl p-8 flex flex-col justify-end">
-                                <Heart className="text-secondary mb-4" size={32} />
-                                <p className="font-bold text-gray-900">Leidenschaft</p>
-                                <p className="text-sm text-gray-500">Für grüne Lösungen</p>
-                            </div>
-                            <div className="aspect-square bg-accent/10 rounded-3xl p-8 flex flex-col justify-end">
-                                <Shield className="text-accent-foreground mb-4" size={32} />
-                                <p className="font-bold text-gray-900">Stabilität</p>
-                                <p className="text-sm text-gray-500">Sichere Partnerschaft</p>
-                            </div>
-                            <div className="aspect-square bg-gray-50 rounded-3xl p-8 flex flex-col justify-end">
-                                <Users className="text-gray-400 mb-4" size={32} />
-                                <p className="font-bold text-gray-900">Familie</p>
-                                <p className="text-sm text-gray-500">Inhabergeführt</p>
-                            </div>
-                        </div>
+            {/* Geschichte */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 text-center leading-tight">
+                        Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
+                    </h2>
+                    <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+                        <p>
+                            LEOGA wurde mit dem Ziel gegründet, die Energiewende dort voranzutreiben, wo sie stattfindet: in der Region, auf dem Land, im Gespräch mit den Menschen.
+                        </p>
+                        <p>
+                            Wir verstehen uns nicht als kurzfristige Projektentwickler. Wenn wir einen Pachtvertrag unterschreiben, dann ist das der Beginn einer Partnerschaft über Jahrzehnte – generationenübergreifend und verlässlich.
+                        </p>
+                        <p>
+                            Unsere Geschichte ist geprägt von handwerklichem Können, unternehmerischem Mut und dem Respekt vor dem Land, auf dem wir arbeiten. Das treibt uns an – jeden Tag.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            {/* Values Section */}
-            <section className="py-24 bg-gray-900 text-white">
+            {/* Werte */}
+            <section className="py-16 md:py-24 bg-cream">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Unsere Werte</h2>
-                        <p className="text-gray-400">Das Versprechen, an dem wir uns messen lassen.</p>
+                    <div className="text-center mb-12">
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-4">Unsere Werte</h2>
+                        <p className="text-muted-foreground text-lg">Das Versprechen, an dem wir uns messen lassen.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-secondary mx-auto mb-6">
-                                <Target size={32} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        {values.map((value, i) => (
+                            <div key={i} className="bg-white rounded-2xl p-7">
+                                <div className="w-12 h-12 rounded-xl bg-warm flex items-center justify-center mb-5">
+                                    <value.icon size={22} className="text-primary" />
+                                </div>
+                                <h3 className="font-semibold text-earth mb-2 text-lg">{value.title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">{value.text}</p>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4">Fair</h3>
-                            <p className="text-gray-400 leading-relaxed">Wir bieten Pachtverträge, die beiden Seiten Freude bereiten. Keine versteckten Klauseln, sondern transparente Konditionen.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-secondary mx-auto mb-6">
-                                <Shield size={32} />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-4">Stabil</h3>
-                            <p className="text-gray-400 leading-relaxed">Als Familienunternehmen sind wir krisenfest. Uns gibt es seit 60 Jahren und uns wird es auch in den nächsten 60 Jahren geben.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-secondary mx-auto mb-6">
-                                <Leaf size={32} />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-4">Nachhaltig</h3>
-                            <p className="text-gray-400 leading-relaxed">Nachhaltigkeit bedeutet für uns mehr als nur CO2-Ersparnis. Es bedeutet ökologischen Mehrwert und regionalen Wohlstand.</p>
-                        </div>
+                        ))}
                     </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-16 md:py-24 bg-primary">
+                <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Lernen Sie uns kennen</h2>
+                    <p className="text-white/80 mb-8 text-lg">
+                        Wir freuen uns auf ein persönliches Gespräch – unverbindlich und ehrlich.
+                    </p>
+                    <Link
+                        href="/kontakt"
+                        className="inline-flex items-center gap-2 bg-white text-primary font-medium px-8 py-3.5 rounded-full hover:bg-cream transition-all shadow-lg"
+                    >
+                        Kontakt aufnehmen
+                        <ArrowRight size={16} />
+                    </Link>
                 </div>
             </section>
         </div>
