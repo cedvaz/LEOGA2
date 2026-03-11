@@ -16,7 +16,8 @@ export default function BatteriespeicherPage() {
             <SubpageHero
                 title="Batteriespeicher"
                 subtitle="Energiespeicher machen die Energiewende verlässlich. Wir entwickeln Speicherprojekte auf Ihren Flächen."
-                imagePlaceholder="Batteriespeicher-Anlage / Projektfoto"
+                imageSrc="/pictures/Batterie_Hero.png"
+                imageAlt="Techniker mit Tablet vor Batteriespeicher-Container und Windkraftanlagen"
             />
 
             {/* Intro */}

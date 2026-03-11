@@ -16,7 +16,8 @@ export default function PhotovoltaikPage() {
             <SubpageHero
                 title="Photovoltaik"
                 subtitle="Solarparks, die Ertrag und Naturschutz verbinden. Für Sie und für die Region."
-                imagePlaceholder="Solarpark-Panorama / Drohnenbild"
+                imageSrc="/pictures/Solar_Hero.png"
+                imageAlt="Solarpark-Panorama mit Feldern und Bergen im Sonnenaufgang"
             />
 
             {/* Intro */}

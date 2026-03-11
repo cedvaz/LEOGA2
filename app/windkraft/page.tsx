@@ -16,7 +16,8 @@ export default function WindkraftPage() {
             <SubpageHero
                 title="Windkraft"
                 subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
-                imagePlaceholder="Windpark-Panorama / Drohnenbild"
+                imageSrc="/pictures/Wind_Hero.png"
+                imageAlt="Windkraftanlage aus der Froschperspektive vor blauem Himmel"
             />
 
             {/* Intro */}
