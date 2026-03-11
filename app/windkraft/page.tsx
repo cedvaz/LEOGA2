@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SubpageHero } from "@/components/layout/SubpageHero";
-import { CheckCircle2, ArrowRight, ImageIcon } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -8,13 +9,6 @@ export const metadata: Metadata = {
     description: "LEOGA entwickelt Windkraftprojekte gemeinsam mit Flächeneigentümern. Verantwortungsvolle Planung, faire Konditionen und langfristige Begleitung.",
 };
 
-const ImagePlaceholder = ({ text }: { text: string }) => (
-    <div className="w-full h-full bg-warm flex flex-col items-center justify-center text-muted-foreground p-8 text-center border-2 border-dashed border-sand rounded-2xl">
-        <ImageIcon size={40} className="mb-3 opacity-25" />
-        <p className="font-medium text-sm">{text}</p>
-        <p className="text-xs mt-1 opacity-50">Platzhalter für Bild</p>
-    </div>
-);
 
 export default function WindkraftPage() {
     return (
@@ -40,8 +34,13 @@ export default function WindkraftPage() {
                                 Wir planen Windkraftprojekte mit Bedacht: Standortwahl, Artenschutz und die Einbindung der Gemeinde stehen von Anfang an im Mittelpunkt. Denn ein Windrad steht für Jahrzehnte – genau wie unsere Partnerschaft mit Ihnen.
                             </p>
                         </div>
-                        <div className="aspect-[4/3]">
-                            <ImagePlaceholder text="Windkraftanlage in der Landschaft" />
+                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                            <Image
+                                src="/pictures/Windturbinen.png"
+                                alt="Windkraftanlagen auf grünen Hügeln bei Sonnenuntergang"
+                                fill
+                                className="object-cover brightness-105"
+                            />
                         </div>
                     </div>
                 </div>
