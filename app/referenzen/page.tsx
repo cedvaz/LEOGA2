@@ -14,22 +14,22 @@ const referenzen = [
         title: "Windkraft Reichholz",
         type: "Windkraft",
         description: "Windkraftprojekt in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern. Standortprüfung, Genehmigung und Bau aus einer Hand – mit persönlicher Begleitung über den gesamten Prozess.",
-        image: "/ref_windkraft_reichholz.jpg",
-        alt: "Drohnenbild Windpark Reichholz",
+        image: "/pictures/windpark-wildpoldsried.jpg",
+        alt: "Drohnenbild Windpark Wildpoldsried",
     },
     {
         title: "Amper-Kraftwerk",
         type: "Wasserkraft",
         description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung aus Wasserkraft – zuverlässig, emissionsfrei und regional verankert.",
-        image: "/ref_amperkraftwerk.jpg",
-        alt: "Amper-Kraftwerk Wasserkraftanlage",
+        image: "/pictures/kempten-wasserkraftwerk.jpg",
+        alt: "Wasserkraftwerk Kempten",
     },
     {
         title: "Gewerbeimmobilien-Projekt",
         type: "Batteriespeicher",
         description: "Batteriespeicherprojekt auf Gewerbefläche in Nähe eines Umspannwerks. Kurze Wege, minimaler Flächenbedarf und ein Beitrag zur regionalen Netzstabilität.",
-        image: "/ref_gewerbeimmobilien.jpg",
-        alt: "Batteriespeicher Gewerbeimmobilien",
+        image: "/pictures/stabatteriespeicherimmenstadt03.webp",
+        alt: "Batteriespeicher Immenstadt",
     },
 ];
 
