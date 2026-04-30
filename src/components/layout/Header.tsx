@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { NavLink } from "./NavLink";
-import { Menu, X, TreePine } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -36,11 +36,8 @@ export function Header() {
             )}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-18">
-                <Link href="/" className="flex items-center gap-2.5 group">
-                    <div className="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:scale-105">
-                        <TreePine size={18} />
-                    </div>
-                    <span className="text-xl font-bold tracking-tight text-earth font-serif">
+                <Link href="/" className="flex items-center group">
+                    <span className="text-xl font-bold tracking-tight text-earth font-serif group-hover:text-primary transition-colors">
                         LEOGA
                     </span>
                 </Link>

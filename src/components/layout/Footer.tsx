@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TreePine } from "lucide-react";
+import { CookieSettingsLink } from "./CookieBanner";
 
 export function Footer() {
     return (
@@ -8,10 +8,7 @@ export function Footer() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="col-span-2 md:col-span-1">
-                        <Link href="/" className="flex items-center gap-2.5 mb-5">
-                            <div className="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white">
-                                <TreePine size={18} />
-                            </div>
+                        <Link href="/" className="inline-block mb-5">
                             <span className="text-xl font-bold tracking-tight font-serif">LEOGA</span>
                         </Link>
                         <p className="text-sm text-cream/60 leading-relaxed max-w-xs">
@@ -54,6 +51,7 @@ export function Footer() {
                     <div className="flex gap-6 mt-3 md:mt-0">
                         <Link href="/impressum" className="hover:text-cream/70 transition-colors">Impressum</Link>
                         <Link href="/datenschutz" className="hover:text-cream/70 transition-colors">Datenschutz</Link>
+                        <CookieSettingsLink />
                     </div>
                 </div>
             </div>
