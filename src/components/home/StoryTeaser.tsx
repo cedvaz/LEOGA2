@@ -18,7 +18,7 @@ export function StoryTeaser() {
                             </div>
                             <div className="text-left">
                                 <p className="font-semibold">Familie Krüger</p>
-                                <p className="text-sm text-cream/60">Flächeneigentümer, Niedersachsen</p>
+                                <p className="text-sm text-cream/60">Flächeneigentümer, Allgäu</p>
                             </div>
                         </div>
                     </div>
