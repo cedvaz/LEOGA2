@@ -17,20 +17,19 @@ export default function ImpressumPage() {
                             <h2 className="text-lg font-semibold text-earth mb-2">Angaben gemäß § 5 TMG</h2>
                             <p>
                                 LEOGA GmbH<br />
-                                Musterstraße 1<br />
-                                12345 Musterstadt
+                                Mozartstraße 2<br />
+                                87435 Kempten
                             </p>
                         </div>
 
                         <div>
                             <h2 className="text-lg font-semibold text-earth mb-2">Vertreten durch</h2>
-                            <p>Geschäftsführer: [Name einfügen]</p>
+                            <p>Geschäftsführer: Alexander Gabler</p>
                         </div>
 
                         <div>
                             <h2 className="text-lg font-semibold text-earth mb-2">Kontakt</h2>
                             <p>
-                                Telefon: +49 123 456 7890<br />
                                 E-Mail: info@leoga.de
                             </p>
                         </div>
@@ -39,16 +38,15 @@ export default function ImpressumPage() {
                             <h2 className="text-lg font-semibold text-earth mb-2">Registereintrag</h2>
                             <p>
                                 Eintragung im Handelsregister<br />
-                                Registergericht: [Amtsgericht einfügen]<br />
-                                Registernummer: HRB [Nummer einfügen]
+                                Registergericht: Amtsgericht Kempten (Allgäu)<br />
+                                Registernummer: HRB 14908
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-lg font-semibold text-earth mb-2">Umsatzsteuer-ID</h2>
+                            <h2 className="text-lg font-semibold text-earth mb-2">Steuernummer</h2>
                             <p>
-                                Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                                DE [Nummer einfügen]
+                                Steuernummer: 127/131/30093
                             </p>
                         </div>
 

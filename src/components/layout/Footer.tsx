@@ -44,8 +44,7 @@ export function Footer() {
                         <h3 className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Kontakt</h3>
                         <ul className="space-y-2.5 text-sm text-cream/60">
                             <li>info@leoga.de</li>
-                            <li>+49 (0) 123 456 789</li>
-                            <li>Niedersachsen, DE</li>
+                            <li>Kempten, Bayern</li>
                         </ul>
                     </div>
                 </div>

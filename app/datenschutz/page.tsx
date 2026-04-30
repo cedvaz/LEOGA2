@@ -17,10 +17,9 @@ export default function DatenschutzPage() {
                             <h2 className="text-lg font-semibold text-earth mb-2">1. Verantwortlicher</h2>
                             <p>
                                 LEOGA GmbH<br />
-                                Musterstraße 1<br />
-                                12345 Musterstadt<br />
-                                E-Mail: info@leoga.de<br />
-                                Telefon: +49 123 456 7890
+                                Mozartstraße 2<br />
+                                87435 Kempten<br />
+                                E-Mail: info@leoga.de
                             </p>
                         </div>
 
