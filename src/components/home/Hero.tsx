@@ -40,10 +40,10 @@ export function Hero() {
                     <div className="relative">
                         <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                             <Image
-                                src="/pictures/Alex_Hero.png"
-                                alt="LEOGA Team bei der Projektplanung vor Windkraftanlage"
+                                src="/pictures/hero_handshake.webp"
+                                alt="LEOGA – Partnerschaft mit Flächeneigentümern"
                                 fill
-                                className="object-cover object-top brightness-105"
+                                className="object-cover object-center"
                                 priority
                             />
                         </div>

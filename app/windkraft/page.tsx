@@ -16,8 +16,8 @@ export default function WindkraftPage() {
             <SubpageHero
                 title="Windkraft"
                 subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
-                imageSrc="/pictures/Wind_Hero.png"
-                imageAlt="Windkraftanlage aus der Froschperspektive vor blauem Himmel"
+                imageSrc="/pictures/windkraft_hero.webp"
+                imageAlt="Beratungsgespräch vor Windkraftanlage"
             />
 
             {/* Intro */}
@@ -81,7 +81,7 @@ export default function WindkraftPage() {
                         Partnerschaft auf Augenhöhe
                     </h2>
                     <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                        Ein Windkraftprojekt ist ein Langzeitvorhaben über 25 Jahre und mehr. Deshalb sehen wir uns nicht nur als Projektierer, sondern als verlässlichen Partner der Region.
+                        Deshalb sehen wir uns nicht nur als Projektierer, sondern als verlässlichen Partner der Region.
                     </p>
                     <p className="text-muted-foreground text-lg leading-relaxed">
                         Transparenz von Tag eins, faire Verträge und regionale Wertschöpfung – das ist unser Versprechen.

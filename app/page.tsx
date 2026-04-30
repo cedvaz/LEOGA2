@@ -2,7 +2,6 @@ import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
 import { IconServices } from "@/components/home/IconServices";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
-import { StoryTeaser } from "@/components/home/StoryTeaser";
 import { FAQ } from "@/components/home/FAQ";
 import { ConsultationTeaser } from "@/components/home/ConsultationTeaser";
 import Link from "next/link";
@@ -15,7 +14,6 @@ export default function Home() {
       <Benefits />
       <IconServices />
       <ProcessSteps />
-      <StoryTeaser />
       <FAQ />
       <ConsultationTeaser />
 
