@@ -59,15 +59,6 @@ export default function UeberUnsPage() {
                                     Jahrzehnte des verantwortungsvollen Umgangs mit natürlichen Ressourcen und die enge Verbindung zur Region prägen, wie die Familie Gabler wirtschaftet. LEOGA führt dieses Erbe weiter – mit dem Fokus auf erneuerbare Energien.
                                 </p>
                             </div>
-                            <a
-                                href="https://kiesdorf-hirschdorf.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-primary hover:text-moss transition-colors group"
-                            >
-                                Kies- und Betonwerk Hirschdorf
-                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                            </a>
                         </div>
 
                     </div>

@@ -6,7 +6,7 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
     {
         question: "Welche Flächen eignen sich für eine Zusammenarbeit?",
-        answer: "Grundsätzlich Flächen ab ca. 1 Hektar – Acker, Grünland oder Konversionsflächen. Wir prüfen Ihr Grundstück kostenlos und unverbindlich und besprechen gemeinsam die Möglichkeiten."
+        answer: "Acker, Grünland, Konversionsflächen, Gewässer – wir schauen uns jede Fläche an. Wir prüfen kostenlos und unverbindlich, was möglich ist."
     },
     {
         question: "Wie arbeitet LEOGA mit Flächeneigentümern zusammen?",
@@ -14,7 +14,7 @@ const faqs = [
     },
     {
         question: "Wie lange dauert es von der Anfrage bis zur Umsetzung?",
-        answer: "Je nach Projekt und Genehmigungslage rechnen wir mit 12 bis 24 Monaten. Wir halten Sie in jedem Schritt auf dem Laufenden und arbeiten zügig, aber gründlich."
+        answer: "Das hängt vom Projekt und der Genehmigungslage ab. Wir halten Sie in jedem Schritt auf dem Laufenden und arbeiten gründlich – auch wenn es manchmal Zeit braucht."
     },
     {
         question: "Entstehen mir als Eigentümer Kosten?",
