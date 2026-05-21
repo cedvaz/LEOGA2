@@ -6,9 +6,11 @@ const BYPASS_COOKIE = "leoga_preview";
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
 
-  // Always allow: coming-soon page itself, static assets, API routes
+  // Always allow: coming-soon page itself, legal pages, static assets, API routes
   if (
     pathname.startsWith("/coming-soon") ||
+    pathname.startsWith("/impressum") ||
+    pathname.startsWith("/datenschutz") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/favicon") ||
