@@ -43,7 +43,7 @@ export default function UeberUnsPage() {
             {/* Geschichte */}
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div className="max-w-3xl mx-auto">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
                                 Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
@@ -70,23 +70,6 @@ export default function UeberUnsPage() {
                             </a>
                         </div>
 
-                        <div className="bg-cream rounded-2xl p-8 border border-sand">
-                            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-6">Chronik</p>
-                            <div className="space-y-6">
-                                {[
-                                    { year: "1966", text: "Leonhard Gabler gründet das Kies- und Transport-Betonwerk Hirschdorf in Kempten." },
-                                    { year: "1992", text: "Das Kieswerk wird nach Wolfertschwenden-Darast verlegt, näher an den natürlichen Vorkommen." },
-                                    { year: "Heute", text: "LEOGA entwickelt als nächste Generation Projekte für erneuerbare Energien in der Region." },
-                                ].map((item) => (
-                                    <div key={item.year} className="flex gap-4">
-                                        <div className="w-14 shrink-0">
-                                            <span className="text-sm font-bold text-primary">{item.year}</span>
-                                        </div>
-                                        <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
