@@ -23,14 +23,14 @@ export function ConsultationTeaser() {
                             Persönliche Beratung
                         </p>
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
-                            Kein Callcenter.<br />
-                            Kein Standardformular.
+                            Persönlich.<br />
+                            Direkt. Ehrlich.
                         </h2>
                         <p className="text-muted-foreground leading-relaxed mb-4">
-                            Bei uns sprechen Sie direkt mit den Menschen, die Ihr Projekt auch wirklich umsetzen. Wir nehmen uns Zeit, hören zu und erklären ehrlich, was möglich ist – und was nicht.
+                            Bei uns sprechen Sie mit den Menschen, die Ihr Projekt umsetzen. Wir hören zu und erklären offen, was möglich ist.
                         </p>
                         <p className="text-muted-foreground leading-relaxed mb-8">
-                            So entsteht Vertrauen. Nicht durch große Worte, sondern durch echte Gespräche.
+                            So entsteht Vertrauen – durch echte Gespräche.
                         </p>
                         <Link
                             href="/kontakt"

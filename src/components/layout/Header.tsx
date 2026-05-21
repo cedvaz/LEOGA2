@@ -22,6 +22,7 @@ export function Header() {
         { label: "Windkraft", href: "/windkraft" },
         { label: "Photovoltaik", href: "/photovoltaik" },
         { label: "Batteriespeicher", href: "/batteriespeicher" },
+        { label: "Wasserkraft", href: "/wasserkraft" },
         { label: "Referenzen", href: "/referenzen" },
         { label: "Über uns", href: "/ueber-uns" },
     ];

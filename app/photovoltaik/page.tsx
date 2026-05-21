@@ -29,10 +29,10 @@ export default function PhotovoltaikPage() {
                                 Sonnenergie <span className="text-primary">mit Verantwortung</span>
                             </h2>
                             <p className="text-muted-foreground leading-relaxed mb-4">
-                                Ein Solarpark von LEOGA ist mehr als eine technische Anlage. Wir verbinden Stromerzeugung mit Bodenruhe und Artenvielfalt. Ihre Fläche produziert saubere Energie und erholt sich gleichzeitig von intensiver Nutzung.
+                                Wir entwickeln Photovoltaik-Projekte gemeinsam mit Flächeneigentümern – von der ersten Prüfung bis zum laufenden Betrieb. Stromerzeugung und Naturschutz gehen dabei Hand in Hand.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Ob Ackerfläche, Grünland oder Konversionsfläche – wir prüfen gemeinsam, welches Konzept am besten zu Ihrem Standort passt. Ehrlich beraten, fair umgesetzt.
+                                Unsere Projekte kombinieren Photovoltaik in der Regel mit Batteriespeichern. Das verbessert die Netzstabilität und erhöht die Erträge für alle Beteiligten.
                             </p>
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -80,11 +80,8 @@ export default function PhotovoltaikPage() {
                     <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6">
                         Ihre Fläche in guten Händen
                     </h2>
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                        Wir wissen, dass Ihre Fläche mehr ist als ein Grundstück. Deshalb behandeln wir sie mit Respekt – und geben sie nach Laufzeitende im Ursprungszustand zurück. Das sichern wir vertraglich mit Rückbaubürgschaften.
-                    </p>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                        Energie aus Überzeugung, Partnerschaft aus Tradition.
+                        Ihre Fläche wird mit Sorgfalt bewirtschaftet und nach Laufzeitende vollständig zurückgebaut. Vertraglich gesichert durch Rückbaubürgschaften.
                     </p>
                 </div>
             </section>

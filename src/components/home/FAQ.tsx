@@ -9,8 +9,8 @@ const faqs = [
         answer: "Grundsätzlich Flächen ab ca. 1 Hektar – Acker, Grünland oder Konversionsflächen. Wir prüfen Ihr Grundstück kostenlos und unverbindlich und besprechen gemeinsam die Möglichkeiten."
     },
     {
-        question: "Was macht LEOGA anders als andere Projektierer?",
-        answer: "Wir sind ein Familienunternehmen und denken in Generationen, nicht in Quartalszahlen. Bei uns haben Sie einen persönlichen Ansprechpartner, der Sie über die gesamte Laufzeit begleitet. Wir versprechen nur, was wir halten können."
+        question: "Wie arbeitet LEOGA mit Flächeneigentümern zusammen?",
+        answer: "Als Familienunternehmen denken wir in Generationen. Sie haben einen persönlichen Ansprechpartner, der Sie über die gesamte Laufzeit begleitet. Wir versprechen nur, was wir halten können."
     },
     {
         question: "Wie lange dauert es von der Anfrage bis zur Umsetzung?",
@@ -22,7 +22,7 @@ const faqs = [
     },
     {
         question: "Wer kümmert sich um Wartung und Betrieb?",
-        answer: "Wir übernehmen den kompletten Betrieb über die gesamte Laufzeit. Monitoring, Wartung und Instandhaltung gehören zu unserem Service. Sie haben keinen Aufwand."
+        answer: "Wir übernehmen den kompletten Betrieb über die gesamte Laufzeit. Monitoring, Wartung und Instandhaltung gehören zu unserem Service."
     },
     {
         question: "Kann ich die Fläche nach Vertragsende wieder nutzen?",
