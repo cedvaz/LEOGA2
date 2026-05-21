@@ -42,20 +42,51 @@ export default function UeberUnsPage() {
 
             {/* Geschichte */}
             <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 text-center leading-tight">
-                        Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
-                    </h2>
-                    <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-                        <p>
-                            LEOGA wurde gegründet, um die Energiewende dort voranzutreiben, wo sie stattfindet: in der Region, auf dem Land, im Gespräch mit den Menschen.
-                        </p>
-                        <p>
-                            Wir denken in Generationen. Wenn wir einen Pachtvertrag unterschreiben, ist das der Beginn einer Partnerschaft auf Jahrzehnte.
-                        </p>
-                        <p>
-                            Unsere Geschichte ist geprägt vom Respekt vor dem Land und den Menschen, mit denen wir arbeiten. Das treibt uns an.
-                        </p>
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
+                                Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
+                            </h2>
+                            <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                <p>
+                                    Die Geschichte von LEOGA beginnt 1966: Leonhard Gabler gründete in Kempten-Hirschdorf das Kies- und Transport-Betonwerk Hirschdorf – ein Betrieb, der sich zu einem festen Bestandteil der regionalen Bauwirtschaft entwickelte.
+                                </p>
+                                <p>
+                                    Das Betonwerk steht bis heute in Kempten-Hirschdorf. Das Kieswerk wurde 1992 nach Wolfertschwenden-Darast verlegt, wo die natürlichen Kiesvorkommen liegen.
+                                </p>
+                                <p>
+                                    Jahrzehnte des verantwortungsvollen Umgangs mit natürlichen Ressourcen und die enge Verbindung zur Region prägen, wie die Familie Gabler wirtschaftet. LEOGA führt dieses Erbe weiter – mit dem Fokus auf erneuerbare Energien.
+                                </p>
+                            </div>
+                            <a
+                                href="https://kiesdorf-hirschdorf.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-primary hover:text-moss transition-colors group"
+                            >
+                                Kies- und Betonwerk Hirschdorf
+                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            </a>
+                        </div>
+
+                        <div className="bg-cream rounded-2xl p-8 border border-sand">
+                            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-6">Chronik</p>
+                            <div className="space-y-6">
+                                {[
+                                    { year: "1966", text: "Leonhard Gabler gründet das Kies- und Transport-Betonwerk Hirschdorf in Kempten." },
+                                    { year: "1992", text: "Das Kieswerk wird nach Wolfertschwenden-Darast verlegt, näher an den natürlichen Vorkommen." },
+                                    { year: "Heute", text: "LEOGA entwickelt als nächste Generation Projekte für erneuerbare Energien in der Region." },
+                                ].map((item) => (
+                                    <div key={item.year} className="flex gap-4">
+                                        <div className="w-14 shrink-0">
+                                            <span className="text-sm font-bold text-primary">{item.year}</span>
+                                        </div>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

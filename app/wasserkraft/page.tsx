@@ -25,13 +25,13 @@ export default function WasserkraftPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
-                                Wasserkraft mit <span className="text-primary">Geschichte</span>
+                                Wasserkraft aus der <span className="text-primary">Region</span>
                             </h2>
                             <p className="text-muted-foreground leading-relaxed mb-4">
-                                Die Familie Gabler ist seit Generationen mit dem Allgäu und seinen natürlichen Ressourcen verbunden. 1966 gründete Leonhard Gabler das Kies- und Betonwerk Hirschdorf in Kempten – ein Betrieb, der bis heute Teil der regionalen Bauwirtschaft ist.
+                                Fließendes Wasser erzeugt verlässlich Strom – rund um die Uhr, wetterunabhängig und mit minimalem Eingriff in die Natur. LEOGA entwickelt Wasserkraftprojekte gemeinsam mit Grundstückseigentümern, die über geeignete Gewässer verfügen.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Diese Verwurzelung in der Region und der respektvolle Umgang mit natürlichen Ressourcen prägen auch die Arbeit von LEOGA. Wasserkraft ist für uns eine natürliche Erweiterung dieses Denkens.
+                                Wir übernehmen die gesamte Projektentwicklung – von der wasserrechtlichen Genehmigung bis zum laufenden Betrieb. Fair, stabil und nachhaltig.
                             </p>
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -41,54 +41,6 @@ export default function WasserkraftPage() {
                                 fill
                                 className="object-cover brightness-105"
                             />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Familienerbe */}
-            <section className="py-16 md:py-24 bg-cream">
-                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                        <div>
-                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6 leading-tight">
-                                Seit 1966 in der Region
-                            </h2>
-                            <p className="text-muted-foreground leading-relaxed mb-4">
-                                Leonhard Gabler gründete 1966 in Kempten-Hirschdorf ein Kies- und Transportbetonwerk, das sich zur festen Größe der regionalen Bauwirtschaft entwickelte. Das Betonwerk befindet sich bis heute in Kempten-Hirschdorf; das Kieswerk wurde 1992 nach Wolfertschwenden-Darast verlegt, wo die natürlichen Kiesvorkommen liegen.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed mb-4">
-                                Jahrzehnte des Umgangs mit natürlichen Rohstoffen und die enge Verbindung zur Region haben geprägt, wie die Familie Gabler wirtschaftet: verlässlich, langfristig und mit Respekt vor dem, was die Natur gibt.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed">
-                                LEOGA führt dieses Erbe weiter – mit dem Blick auf erneuerbare Energien und einem klaren Bekenntnis zur Region.
-                            </p>
-                            <a
-                                href="https://kiesdorf-hirschdorf.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-primary hover:text-moss transition-colors group"
-                            >
-                                Kies- und Betonwerk Hirschdorf
-                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                            </a>
-                        </div>
-                        <div className="bg-white rounded-2xl p-8 border border-sand">
-                            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-4">Chronik</p>
-                            <div className="space-y-6">
-                                {[
-                                    { year: "1966", text: "Leonhard Gabler gründet das Kies- und Betonwerk Hirschdorf in Kempten." },
-                                    { year: "1992", text: "Das Kieswerk wird nach Wolfertschwenden-Darast verlegt, näher an den natürlichen Vorkommen." },
-                                    { year: "Heute", text: "LEOGA entwickelt als nächste Generation Projekte für erneuerbare Energien in der Region." },
-                                ].map((item) => (
-                                    <div key={item.year} className="flex gap-4">
-                                        <div className="w-14 shrink-0">
-                                            <span className="text-sm font-bold text-primary">{item.year}</span>
-                                        </div>
-                                        <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
