@@ -41,6 +41,15 @@ function SolarIcon() {
     );
 }
 
+function WaterIcon() {
+    return (
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M40 12 C40 12 22 32 22 46 C22 56 30 64 40 64 C50 64 58 56 58 46 C58 32 40 12 40 12Z" />
+            <path d="M30 50 C30 50 32 56 38 58" />
+        </svg>
+    );
+}
+
 function BatteryIcon() {
     return (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -73,6 +82,12 @@ const services = [
         description: "Energiespeicher für eine zuverlässige Versorgung und stabile Erträge.",
         href: "/batteriespeicher",
     },
+    {
+        Icon: WaterIcon,
+        title: "Wasserkraft",
+        description: "Energie aus fließendem Wasser. Regional verwurzelt, langfristig gedacht.",
+        href: "/wasserkraft",
+    },
 ];
 
 export function IconServices() {
@@ -84,11 +99,11 @@ export function IconServices() {
                         Unsere <span className="text-primary">Leistungen</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        Drei Schwerpunkte, ein Versprechen: verlässliche Energie und faire Partnerschaften.
+                        Vier Schwerpunkte, ein Versprechen: verlässliche Energie und faire Partnerschaften.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                     {services.map((service, index) => (
                         <Link
                             key={index}
