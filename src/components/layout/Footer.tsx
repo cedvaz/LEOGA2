@@ -23,6 +23,7 @@ export function Footer() {
                             <li><Link href="/windkraft" className="hover:text-cream transition-colors">Windkraft</Link></li>
                             <li><Link href="/photovoltaik" className="hover:text-cream transition-colors">Photovoltaik</Link></li>
                             <li><Link href="/batteriespeicher" className="hover:text-cream transition-colors">Batteriespeicher</Link></li>
+                            <li><Link href="/wasserkraft" className="hover:text-cream transition-colors">Wasserkraft</Link></li>
                         </ul>
                     </div>
 
