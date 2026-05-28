@@ -18,6 +18,7 @@ export default function WindkraftPage() {
                 subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
                 imageSrc="/pictures/Alex_Windkraft_Hero.webp"
                 imageAlt="Beratungsgespräch vor Windkraftanlage"
+                tall
             />
 
             {/* Intro */}

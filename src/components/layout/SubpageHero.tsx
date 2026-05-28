@@ -7,9 +7,10 @@ interface SubpageHeroProps {
     imageSrc?: string;
     imageAlt?: string;
     imagePlaceholder?: string;
+    tall?: boolean;
 }
 
-export function SubpageHero({ title, subtitle, imageSrc, imageAlt, imagePlaceholder }: SubpageHeroProps) {
+export function SubpageHero({ title, subtitle, imageSrc, imageAlt, imagePlaceholder, tall }: SubpageHeroProps) {
     return (
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 bg-cream overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
@@ -24,7 +25,7 @@ export function SubpageHero({ title, subtitle, imageSrc, imageAlt, imagePlacehol
                     )}
                 </div>
                 {imageSrc && (
-                    <div className="relative rounded-2xl overflow-hidden aspect-[16/7] max-w-4xl mx-auto">
+                    <div className={`relative rounded-2xl overflow-hidden max-w-4xl mx-auto ${tall ? "aspect-[16/9]" : "aspect-[16/7]"}`}>
                         <Image
                             src={imageSrc}
                             alt={imageAlt || title}

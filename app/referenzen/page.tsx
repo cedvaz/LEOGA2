@@ -21,7 +21,7 @@ const referenzen = [
         title: "Amper-Kraftwerk",
         type: "Amperkraftwerk",
         description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung – zuverlässig, emissionsfrei und regional verankert.",
-        image: "/pictures/amperkraftwerk.webp",
+        image: "/pictures/Alex_Referenzen_Amper.webp",
         alt: "Amper-Kraftwerk",
     },
     {
