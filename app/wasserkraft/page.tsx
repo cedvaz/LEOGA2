@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Wasserkraft – LEOGA | Hydroenergie aus der Region",
-    description: "LEOGA entwickelt Wasserkraftprojekte mit regionalem Bezug und langfristiger Partnerschaft. Verwurzelt im Allgäu seit 1966.",
+    title: "Wasserkraft",
+    description: "Wasserkraftprojekte im Allgäu – LEOGA entwickelt Kleinwasserkraftwerke gemeinsam mit Flächeneigentümern. Regional verwurzelt seit 1966, faire Konditionen, vollständige Begleitung.",
 };
 
 export default function WasserkraftPage() {

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Über uns – LEOGA | Fair. Stabil. Nachhaltig.",
-    description: "LEOGA ist ein Familienunternehmen für erneuerbare Energien aus dem Allgäu. Verwurzelt in der Region, langfristig in der Partnerschaft.",
+    title: "Über uns",
+    description: "LEOGA ist ein Familienunternehmen aus Kempten im Allgäu. Seit Generationen regional verwurzelt – wir entwickeln Windkraft-, Photovoltaik- und Wasserkraftprojekte fair, stabil und nachhaltig.",
 };
 
 const values = [
@@ -28,7 +28,7 @@ export default function UeberUnsPage() {
                             Energie aus Überzeugung, Partnerschaft aus Tradition.
                         </p>
                     </div>
-                    <div className="relative rounded-2xl overflow-hidden aspect-[16/7] max-w-4xl mx-auto">
+                    <div className="relative rounded-2xl overflow-hidden aspect-[16/9] max-w-4xl mx-auto">
                         <Image
                             src="/pictures/Alex_ueberuns.png"
                             alt="LEOGA Geschäftsführer im Gespräch vor Windkraftanlage"

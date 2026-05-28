@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Referenzen – LEOGA | Unsere Projekte",
-    description: "Ausgewählte Referenzprojekte von LEOGA: Windkraft, Wasserkraftwerk und Batteriespeicher – verlässlich umgesetzt in Partnerschaft mit Eigentümern.",
+    title: "Referenzen",
+    description: "Referenzprojekte von LEOGA im Allgäu und Bayern: Windkraft, Photovoltaik, Wasserkraft und Batteriespeicher – umgesetzt in Partnerschaft mit Eigentümern.",
 };
 
 const referenzen = [
@@ -19,10 +19,10 @@ const referenzen = [
     },
     {
         title: "Amper-Kraftwerk",
-        type: "Wasserkraft",
-        description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung aus Wasserkraft – zuverlässig, emissionsfrei und regional verankert.",
-        image: "/pictures/kempten-wasserkraftwerk.jpg",
-        alt: "Wasserkraftwerk Kempten",
+        type: "Amperkraftwerk",
+        description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung – zuverlässig, emissionsfrei und regional verankert.",
+        image: "/pictures/amperkraftwerk.webp",
+        alt: "Amper-Kraftwerk",
     },
     {
         title: "Gewerbeimmobilien-Projekt",

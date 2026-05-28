@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Batteriespeicher – LEOGA | Energiespeicher für die Zukunft",
-    description: "LEOGA entwickelt Batteriespeicherprojekte auf Ihren Flächen. Stabile Erträge, minimaler Flächenverbrauch und ein Beitrag zur Netzstabilität.",
+    title: "Batteriespeicher",
+    description: "Batteriespeicherprojekte im Allgäu – LEOGA entwickelt Energiespeicher auf Ihren Flächen. Stabile Erträge, minimaler Flächenverbrauch, fairer Pachtvertrag.",
 };
 
 

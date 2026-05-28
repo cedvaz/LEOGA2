@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Windkraft – LEOGA | Windkraftprojekte in Partnerschaft",
-    description: "LEOGA entwickelt Windkraftprojekte gemeinsam mit Flächeneigentümern. Verantwortungsvolle Planung, faire Konditionen und langfristige Begleitung.",
+    title: "Windkraft",
+    description: "Windkraftprojekte im Allgäu und Bayern – LEOGA entwickelt Windenergieanlagen gemeinsam mit Flächeneigentümern. Kostenlose Standortprüfung, faire Pachtverträge, vollständige Projektbegleitung.",
 };
 
 
@@ -16,7 +16,7 @@ export default function WindkraftPage() {
             <SubpageHero
                 title="Windkraft"
                 subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
-                imageSrc="/pictures/windkraft_hero.webp"
+                imageSrc="/pictures/Alex_Windkraft_Hero.webp"
                 imageAlt="Beratungsgespräch vor Windkraftanlage"
             />
 

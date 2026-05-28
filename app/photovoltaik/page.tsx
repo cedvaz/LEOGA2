@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Photovoltaik – LEOGA | Solarparks auf Freiflächen",
-    description: "LEOGA entwickelt Photovoltaik-Freiflächenanlagen gemeinsam mit Flächeneigentümern. Faire Pacht, langfristige Partnerschaft und ökologischer Mehrwert.",
+    title: "Photovoltaik",
+    description: "Photovoltaik-Freiflächenanlagen im Allgäu – LEOGA entwickelt Solarparks mit Batteriespeicher gemeinsam mit Eigentümern. Faire Pacht, kostenlose Flächenprüfung, langfristige Begleitung.",
 };
 
 

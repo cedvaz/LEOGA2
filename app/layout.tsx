@@ -7,8 +7,18 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "LEOGA – Energie aus Überzeugung, Partnerschaft aus Tradition",
-  description: "LEOGA entwickelt Windkraft-, Photovoltaik- und Batteriespeicherprojekte. Langfristige Partnerschaften mit Eigentümern – verwurzelt, verlässlich, fair.",
+  title: {
+    default: "LEOGA – Erneuerbare Energien im Allgäu",
+    template: "%s – LEOGA",
+  },
+  description: "LEOGA entwickelt Windkraft-, Photovoltaik-, Batteriespeicher- und Wasserkraftprojekte im Allgäu. Faire Pachtverträge und persönliche Beratung für Flächeneigentümer.",
+  metadataBase: new URL("https://leoga.de"),
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "https://leoga.de",
+    siteName: "LEOGA",
+  },
 };
 
 import { Header } from "@/components/layout/Header";
