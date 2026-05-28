@@ -25,7 +25,7 @@ export function SubpageHero({ title, subtitle, imageSrc, imageAlt, imagePlacehol
                     )}
                 </div>
                 {imageSrc && (
-                    <div className={`relative rounded-2xl overflow-hidden max-w-4xl mx-auto ${tall ? "aspect-[16/9]" : "aspect-[16/7]"}`}>
+                    <div className="relative rounded-2xl overflow-hidden aspect-[16/9] max-w-4xl mx-auto">
                         <Image
                             src={imageSrc}
                             alt={imageAlt || title}
