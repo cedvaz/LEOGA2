@@ -26,10 +26,10 @@ const referenzen = [
     },
     {
         title: "Gewerbeimmobilien-Projekt",
-        type: "Batteriespeicher",
-        description: "Batteriespeicherprojekt auf Gewerbefläche in Nähe eines Umspannwerks. Kurze Wege, minimaler Flächenbedarf und ein Beitrag zur regionalen Netzstabilität.",
-        image: "/pictures/stabatteriespeicherimmenstadt03.webp",
-        alt: "Batteriespeicher Immenstadt",
+        type: "Gewerbeimmobilie",
+        description: "Projekt auf einer Gewerbefläche in regionaler Lage. Durchdacht geplant, fair umgesetzt – in enger Abstimmung mit dem Eigentümer.",
+        image: "/pictures/Alex_Referenz_Gewerbe.webp",
+        alt: "Gewerbeimmobilien-Projekt",
     },
 ];
 
