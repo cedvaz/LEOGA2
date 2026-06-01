@@ -36,7 +36,7 @@ export default function WasserkraftPage() {
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                             <Image
-                                src="/pictures/kempten-wasserkraftwerk.jpg"
+                                src="/pictures/alex_wasser.jpeg"
                                 alt="Wasserkraftwerk im Allgäu"
                                 fill
                                 className="object-cover brightness-105"
