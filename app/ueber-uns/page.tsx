@@ -21,6 +21,7 @@ const referenzen = [
         description: "Windkraftprojekt in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern. Standortprüfung, Genehmigung und Bau aus einer Hand – mit persönlicher Begleitung über den gesamten Prozess.",
         image: "/pictures/Windkraft_Rechholz_Single.webp",
         alt: "Drohnenbild Windpark Wildpoldsried",
+        objectPosition: "center 80%",
     },
     {
         title: "Amper-Kraftwerk",
@@ -139,6 +140,7 @@ export default function UeberUnsPage() {
                                         alt={ref.alt}
                                         fill
                                         className="object-cover"
+                                        style={ref.objectPosition ? { objectPosition: ref.objectPosition } : undefined}
                                     />
                                 </div>
                                 <div className="p-8">
