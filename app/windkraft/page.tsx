@@ -16,7 +16,7 @@ export default function WindkraftPage() {
             <SubpageHero
                 title="Windkraft"
                 subtitle="Windenergie mit Weitblick. Wir planen Projekte, die zur Region passen – verantwortungsvoll und langfristig."
-                imageSrc="/pictures/Alex_Windkraft_Hero.webp"
+                imageSrc="/pictures/Alex_Start_Hero.webp"
                 imageAlt="Beratungsgespräch vor Windkraftanlage"
                 tall
             />
