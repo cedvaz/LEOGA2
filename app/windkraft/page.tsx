@@ -38,7 +38,7 @@ export default function WindkraftPage() {
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                             <Image
-                                src="/pictures/Windturbinen.png"
+                                src="/pictures/Windkraft_Reichholz.webp"
                                 alt="Windkraftanlagen auf grünen Hügeln bei Sonnenuntergang"
                                 fill
                                 className="object-cover brightness-105"

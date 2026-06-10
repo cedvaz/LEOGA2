@@ -19,7 +19,7 @@ const referenzen = [
         title: "Windkraft Reichholz",
         type: "Windkraft",
         description: "Windkraftprojekt in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern. Standortprüfung, Genehmigung und Bau aus einer Hand – mit persönlicher Begleitung über den gesamten Prozess.",
-        image: "/pictures/windpark-wildpoldsried.jpg",
+        image: "/pictures/Windkraft_Rechholz_Single.webp",
         alt: "Drohnenbild Windpark Wildpoldsried",
     },
     {
