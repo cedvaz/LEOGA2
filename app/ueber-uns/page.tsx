@@ -42,20 +42,32 @@ export default function UeberUnsPage() {
 
             {/* Geschichte */}
             <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-8 leading-tight">
-                        Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
-                    </h2>
-                    <div className="space-y-5 text-muted-foreground leading-relaxed">
-                        <p>
-                            Nach dem Zweiten Weltkrieg begann Leonhard Gabler hinter dem elterlichen Hof mit dem Sandabbau – der Grundstein für das, was die Familie Gabler über Generationen aufgebaut hat. Daraus entstanden Kies-, Deponie- und Betonbetriebe, die bis heute in der Familie betrieben werden, unter anderem im Darast.
-                        </p>
-                        <p>
-                            Unternehmerisch getrieben und fasziniert von der Energiegewinnung aus Wasserkraft, begann Leonhard Gabler bereits in den 1970er-Jahren mit dem Ankauf, der Sanierung und dem Betrieb von Wasserkraftwerken im süddeutschen Raum. Viele dieser Anlagen werden bis heute betrieben – ein stilles Zeugnis für seine Weitsicht.
-                        </p>
-                        <p>
-                            Neben dem Betrieb von Windkraftanlagen und Liegenschaften stehen heute in der Projektentwicklung Windenergie, Photovoltaik und Großbatteriespeicher im süddeutschen Raum im Fokus. Was Leonhard Gabler begann, führt die nächste Generation mit demselben Anspruch weiter: verlässlich, regional, langfristig.
-                        </p>
+                <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-8 leading-tight">
+                                Ein Familienunternehmen mit <span className="text-primary">Wurzeln</span>
+                            </h2>
+                            <div className="space-y-5 text-muted-foreground leading-relaxed">
+                                <p>
+                                    Nach dem Zweiten Weltkrieg begann Leonhard Gabler hinter dem elterlichen Hof mit dem Sandabbau – der Grundstein für das, was die Familie Gabler über Generationen aufgebaut hat. Daraus entstanden Kies-, Deponie- und Betonbetriebe, die bis heute in der Familie betrieben werden, unter anderem im Darast.
+                                </p>
+                                <p>
+                                    Unternehmerisch getrieben und fasziniert von der Energiegewinnung aus Wasserkraft, begann Leonhard Gabler bereits in den 1970er-Jahren mit dem Ankauf, der Sanierung und dem Betrieb von Wasserkraftwerken im süddeutschen Raum. Viele dieser Anlagen werden bis heute betrieben – ein stilles Zeugnis für seine Weitsicht.
+                                </p>
+                                <p>
+                                    Neben dem Betrieb von Windkraftanlagen und Liegenschaften stehen heute in der Projektentwicklung Windenergie, Photovoltaik und Großbatteriespeicher im süddeutschen Raum im Fokus. Was Leonhard Gabler begann, führt die nächste Generation mit demselben Anspruch weiter: verlässlich, regional, langfristig.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto lg:mx-0 lg:ml-auto">
+                            <Image
+                                src="/pictures/gabler sen.webp"
+                                alt="Leonhard Gabler, Gründer"
+                                fill
+                                className="object-cover object-top"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
