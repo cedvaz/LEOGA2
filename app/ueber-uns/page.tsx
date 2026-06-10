@@ -84,12 +84,14 @@ export default function UeberUnsPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto lg:mx-0 lg:ml-auto">
-                            <Image
+                        <div className="rounded-2xl overflow-hidden max-w-sm mx-auto lg:mx-0 lg:ml-auto">
+                            <img
                                 src="/pictures/gabler_sen.webp"
                                 alt="Leonhard Gabler, Gründer"
-                                fill
-                                className="object-cover object-top"
+                                width={800}
+                                height={1132}
+                                style={{ width: "100%", height: "auto" }}
+                                className="object-cover object-top rounded-2xl"
                             />
                         </div>
                     </div>
