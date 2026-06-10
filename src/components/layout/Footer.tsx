@@ -32,7 +32,6 @@ export function Footer() {
                         <h3 className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Unternehmen</h3>
                         <ul className="space-y-2.5 text-sm text-cream/60">
                             <li><Link href="/ueber-uns" className="hover:text-cream transition-colors">Über uns</Link></li>
-                            <li><Link href="/referenzen" className="hover:text-cream transition-colors">Referenzen</Link></li>
                             <li><Link href="/kontakt" className="hover:text-cream transition-colors">Kontakt</Link></li>
                         </ul>
                     </div>

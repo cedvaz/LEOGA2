@@ -23,7 +23,6 @@ export function Header() {
         { label: "Photovoltaik", href: "/photovoltaik" },
         { label: "Batteriespeicher", href: "/batteriespeicher" },
         { label: "Wasserkraft", href: "/wasserkraft" },
-        { label: "Referenzen", href: "/referenzen" },
         { label: "Über uns", href: "/ueber-uns" },
     ];
 

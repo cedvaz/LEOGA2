@@ -14,6 +14,30 @@ const values = [
     { icon: Leaf, title: "Nachhaltig", text: "Erneuerbare Energie mit Rücksicht auf Natur, Region und Mensch." },
 ];
 
+const referenzen = [
+    {
+        title: "Windkraft Reichholz",
+        type: "Windkraft",
+        description: "Windkraftprojekt in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern. Standortprüfung, Genehmigung und Bau aus einer Hand – mit persönlicher Begleitung über den gesamten Prozess.",
+        image: "/pictures/windpark-wildpoldsried.jpg",
+        alt: "Drohnenbild Windpark Wildpoldsried",
+    },
+    {
+        title: "Amper-Kraftwerk",
+        type: "Amperkraftwerk",
+        description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung – zuverlässig, emissionsfrei und regional verankert.",
+        image: "/pictures/Alex_Referenzen_Amper.webp",
+        alt: "Amper-Kraftwerk",
+    },
+    {
+        title: "Gewerbeimmobilien-Projekt",
+        type: "Gewerbeimmobilie",
+        description: "Projekt auf einer Gewerbefläche in regionaler Lage. Durchdacht geplant, fair umgesetzt – in enger Abstimmung mit dem Eigentümer.",
+        image: "/pictures/Alex_Referenz_Gewerbe.webp",
+        alt: "Gewerbeimmobilien-Projekt",
+    },
+];
+
 export default function UeberUnsPage() {
     return (
         <div className="flex flex-col min-h-screen">
@@ -62,7 +86,7 @@ export default function UeberUnsPage() {
                         </div>
                         <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto lg:mx-0 lg:ml-auto">
                             <Image
-                                src="/pictures/gabler sen.webp"
+                                src="/pictures/gabler%20sen.webp"
                                 alt="Leonhard Gabler, Gründer"
                                 fill
                                 className="object-cover object-top"
@@ -89,6 +113,39 @@ export default function UeberUnsPage() {
                                 </div>
                                 <h3 className="font-semibold text-earth mb-2 text-lg">{value.title}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{value.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Referenzen */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-4">
+                            Ausgewählte <span className="text-primary">Referenzen</span>
+                        </h2>
+                        <p className="text-muted-foreground text-lg">Projekte, die für unsere Arbeitsweise stehen: gründlich, fair und langfristig.</p>
+                    </div>
+                    <div className="space-y-10">
+                        {referenzen.map((ref, i) => (
+                            <div key={i} className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center bg-cream rounded-2xl overflow-hidden">
+                                <div className="relative aspect-[16/10]">
+                                    <Image
+                                        src={ref.image}
+                                        alt={ref.alt}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="p-8">
+                                    <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+                                        {ref.type}
+                                    </span>
+                                    <h3 className="text-xl font-serif font-bold text-earth mb-3">{ref.title}</h3>
+                                    <p className="text-muted-foreground leading-relaxed text-sm">{ref.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
