@@ -18,7 +18,7 @@ const referenzen = [
     {
         title: "Windkraft Reichholz",
         type: "Windenergie",
-        description: "Windenergieanlagen in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern realisiert. Von der Planung bis zum laufenden Betrieb – alles aus einer Hand.",
+        description: "Windenergieanlagen im laufenden Betrieb. Von der Planung bis zur Umsetzung – alles aus einer Hand.",
         image: "/pictures/Windkraft_Rechholz_Single.webp",
         alt: "Windenergieanlage Reichholz",
         objectPosition: "center top",
