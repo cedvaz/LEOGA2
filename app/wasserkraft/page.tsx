@@ -76,9 +76,9 @@ export default function WasserkraftPage() {
             {/* CTA */}
             <section className="py-16 md:py-24 bg-primary">
                 <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
-                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Haben Sie ein Gewässer auf Ihrer Fläche?</h2>
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Interesse an Wasserkraft?</h2>
                     <p className="text-white/80 mb-8 text-lg">
-                        Wir prüfen die Möglichkeiten kostenfrei und unverbindlich.
+                        Sprechen Sie mit uns – wir freuen uns auf den Austausch.
                     </p>
                     <Link
                         href="/kontakt"

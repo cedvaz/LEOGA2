@@ -17,25 +17,25 @@ const values = [
 const referenzen = [
     {
         title: "Windkraft Reichholz",
-        type: "Windkraft",
-        description: "Windkraftprojekt in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern. Standortprüfung, Genehmigung und Bau aus einer Hand – mit persönlicher Begleitung über den gesamten Prozess.",
+        type: "Windenergie",
+        description: "Windenergieanlagen in enger Zusammenarbeit mit der Gemeinde und lokalen Flächeneigentümern realisiert. Von der Planung bis zum laufenden Betrieb – alles aus einer Hand.",
         image: "/pictures/Windkraft_Rechholz_Single.webp",
-        alt: "Drohnenbild Windpark Wildpoldsried",
+        alt: "Windenergieanlage Reichholz",
         objectPosition: "center top",
     },
     {
-        title: "Amper-Kraftwerk",
-        type: "Amperkraftwerk",
-        description: "Wasserkraftprojekt an der Amper in enger Abstimmung mit Behörden und Anliegern. Saubere, kontinuierliche Stromerzeugung – zuverlässig, emissionsfrei und regional verankert.",
+        title: "Amperkraftwerk",
+        type: "Wasserkraft",
+        description: "Wasserkraftwerk an der Amper – seit Jahren zuverlässig im Betrieb. Saubere Stromerzeugung, rund um die Uhr, regional verankert.",
         image: "/pictures/Alex_Referenzen_Amper.webp",
-        alt: "Amper-Kraftwerk",
+        alt: "Amperkraftwerk",
     },
     {
-        title: "Gewerbeimmobilien-Projekt",
-        type: "Gewerbeimmobilie",
-        description: "Projekt auf einer Gewerbefläche in regionaler Lage. Durchdacht geplant, fair umgesetzt – in enger Abstimmung mit dem Eigentümer.",
+        title: "Gewerbeimmobilie",
+        type: "Immobilie",
+        description: "Gewerbefläche in regionaler Lage. Durchdacht geplant, fair umgesetzt – in enger Abstimmung mit dem Eigentümer.",
         image: "/pictures/Alex_Referenz_Gewerbe.webp",
-        alt: "Gewerbeimmobilien-Projekt",
+        alt: "Gewerbeimmobilie",
     },
 ];
 
