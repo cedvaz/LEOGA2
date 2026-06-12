@@ -172,28 +172,34 @@ export default function UeberUnsPage() {
                                 title: "Werkstudent:in Informatik",
                                 tasks: "Daten strukturieren & auswerten, interne Prozesse digitalisieren, eigene Tools entwickeln.",
                                 profile: "Informatik, Wirtschaftsinformatik o. ä.",
+                                pdf: "/pictures/Werkstudent_Informatik.pdf",
                             },
                             {
                                 icon: Zap,
                                 title: "Werkstudent:in Elektrotechnik",
                                 tasks: "Anlagen elektrotechnisch auslegen, Netzanschlusskonzepte erstellen, technische Planung.",
                                 profile: "Elektrotechnik, Energietechnik o. ä.",
+                                pdf: "/pictures/Werkstudent_Elektrotechnik.pdf",
                             },
                             {
                                 icon: BarChart3,
                                 title: "Werkstudent:in BWL",
                                 tasks: "Projekte analysieren & mitsteuern, Reporting, Budget und Schriftverkehr.",
                                 profile: "BWL, Wirtschaftsingenieurwesen o. ä.",
+                                pdf: "/pictures/Werkstudent_BWL.pdf",
                             },
                         ].map((job, i) => (
-                            <div key={i} className="bg-white rounded-2xl p-7 flex flex-col">
+                            <a key={i} href={job.pdf} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl p-7 flex flex-col hover:shadow-lg transition-shadow group cursor-pointer">
                                 <div className="w-12 h-12 rounded-xl bg-warm flex items-center justify-center mb-5">
                                     <job.icon size={22} className="text-primary" />
                                 </div>
-                                <h3 className="font-semibold text-earth mb-3 text-lg">{job.title}</h3>
+                                <h3 className="font-semibold text-earth mb-3 text-lg group-hover:text-primary transition-colors">{job.title}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">{job.tasks}</p>
                                 <p className="text-xs text-primary font-medium mt-auto">{job.profile}</p>
-                            </div>
+                                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium mt-4 group-hover:gap-2 transition-all">
+                                    Mehr erfahren <ArrowRight size={14} />
+                                </span>
+                            </a>
                         ))}
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
