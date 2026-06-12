@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Shield, Scale, Leaf, ArrowRight } from "lucide-react";
+import { Shield, Scale, Leaf, ArrowRight, Code, Zap, BarChart3, MapPin, Clock, Euro } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -152,6 +152,64 @@ export default function UeberUnsPage() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Karriere */}
+            <section id="karriere" className="py-16 md:py-24 bg-cream">
+                <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+                    <div className="text-center mb-12">
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-4">
+                            Werde Teil von <span className="text-primary">LEOGA</span>
+                        </h2>
+                        <p className="text-muted-foreground text-lg">Wir suchen Werkstudent:innen, die mit uns die Energiewende gestalten.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        {[
+                            {
+                                icon: Code,
+                                title: "Werkstudent:in Informatik",
+                                tasks: "Daten strukturieren & auswerten, interne Prozesse digitalisieren, eigene Tools entwickeln.",
+                                profile: "Informatik, Wirtschaftsinformatik o. ä.",
+                            },
+                            {
+                                icon: Zap,
+                                title: "Werkstudent:in Elektrotechnik",
+                                tasks: "Anlagen elektrotechnisch auslegen, Netzanschlusskonzepte erstellen, technische Planung.",
+                                profile: "Elektrotechnik, Energietechnik o. ä.",
+                            },
+                            {
+                                icon: BarChart3,
+                                title: "Werkstudent:in BWL",
+                                tasks: "Projekte analysieren & mitsteuern, Reporting, Budget und Schriftverkehr.",
+                                profile: "BWL, Wirtschaftsingenieurwesen o. ä.",
+                            },
+                        ].map((job, i) => (
+                            <div key={i} className="bg-white rounded-2xl p-7 flex flex-col">
+                                <div className="w-12 h-12 rounded-xl bg-warm flex items-center justify-center mb-5">
+                                    <job.icon size={22} className="text-primary" />
+                                </div>
+                                <h3 className="font-semibold text-earth mb-3 text-lg">{job.title}</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{job.tasks}</p>
+                                <p className="text-xs text-primary font-medium mt-auto">{job.profile}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-10">
+                        <span className="flex items-center gap-1.5"><Clock size={16} className="text-primary" /> 10–20 h / Woche</span>
+                        <span className="flex items-center gap-1.5"><Euro size={16} className="text-primary" /> 16 € / Std.</span>
+                        <span className="flex items-center gap-1.5"><MapPin size={16} className="text-primary" /> Kempten (Allgäu)</span>
+                    </div>
+                    <div className="text-center">
+                        <Link
+                            href="/kontakt"
+                            className="inline-flex items-center gap-2 bg-primary text-white font-medium px-8 py-3.5 rounded-full hover:bg-moss transition-all shadow-lg"
+                        >
+                            Jetzt bewerben
+                            <ArrowRight size={16} />
+                        </Link>
+                        <p className="text-xs text-muted-foreground mt-4">Kurze Mail an info@leoga.de oder über unser Kontaktformular.</p>
                     </div>
                 </div>
             </section>
