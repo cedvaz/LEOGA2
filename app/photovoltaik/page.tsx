@@ -58,9 +58,7 @@ export default function PhotovoltaikPage() {
                             { title: "Standort-Check", text: "Kostenlose Prüfung Ihrer Fläche: Ausrichtung, Netzanschluss und Eignung für Photovoltaik." },
                             { title: "Biodiversitätskonzept", text: "Blühstreifen, Insektenhotels und Durchlässe für Kleintiere – Ihr Solarpark als Lebensraum." },
                             { title: "Moderne Technik", text: "Hochleistungsmodule für maximalen Ertrag bei minimalem Flächenverbrauch." },
-                            { title: "Faire Pachtverträge", text: "Langfristige Verträge mit Indexierung. Transparent, verlässlich und ohne versteckte Klauseln." },
-                            { title: "Agri-PV möglich", text: "Auf Wunsch prüfen wir die gleichzeitige Nutzung für Photovoltaik und Landwirtschaft." },
-                            { title: "Kompletter Service", text: "Von der Planung über den Bau bis zum laufenden Betrieb – alles aus einer Hand." },
+                            { title: "Faire Konditionen & kompletter Service", text: "Transparente Verträge und persönliche Begleitung von der Planung bis zum laufenden Betrieb." },
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 items-start bg-white rounded-xl p-5">
                                 <CheckCircle2 size={20} className="text-primary mt-0.5 shrink-0" />
@@ -81,7 +79,7 @@ export default function PhotovoltaikPage() {
                         Ihre Fläche in guten Händen
                     </h2>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                        Ihre Fläche wird mit Sorgfalt bewirtschaftet und nach Laufzeitende vollständig zurückgebaut. Vertraglich gesichert durch Rückbaubürgschaften.
+                        Ihre Fläche wird mit Sorgfalt bewirtschaftet und nach Laufzeitende vollständig zurückgebaut.
                     </p>
                 </div>
             </section>

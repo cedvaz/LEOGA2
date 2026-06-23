@@ -32,7 +32,7 @@ export default function BatteriespeicherPage() {
                                 Wind und Sonne liefern nicht immer dann Strom, wenn er gebraucht wird. Batteriespeicher schließen diese Lücke – sie speichern überschüssige Energie und geben sie ab, wenn die Nachfrage hoch ist.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Für Flächeneigentümer bieten Speicherprojekte attraktive Pachteinnahmen bei minimalem Flächenverbrauch. Schon kleine Grundstücke ab 0,5 Hektar können geeignet sein.
+                                Für Flächeneigentümer bieten Speicherprojekte attraktive Pachteinnahmen bei minimalem Flächenverbrauch.
                             </p>
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -71,18 +71,6 @@ export default function BatteriespeicherPage() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Partnerschaft */}
-            <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6">
-                        Zukunftstechnologie, bodenständig umgesetzt
-                    </h2>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                        Batteriespeicher sind technisch anspruchsvoll – aber die Zusammenarbeit mit uns ist es nicht. Wir erklären verständlich, planen vorausschauend und begleiten Sie persönlich. Das ist unser Anspruch.
-                    </p>
                 </div>
             </section>
 
