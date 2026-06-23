@@ -33,7 +33,7 @@ export default function WindkraftPage() {
                                 Windenergie ist ein wichtiger Baustein der Energiewende. Für uns ist sie mehr als Technik – sie ist eine Verantwortung gegenüber den Menschen und der Landschaft vor Ort.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Wir planen Windkraftprojekte mit Bedacht: Standortwahl, Artenschutz und die Einbindung der Gemeinde stehen von Anfang an im Mittelpunkt. Denn ein Windrad steht für Jahrzehnte – genau wie unsere Partnerschaft mit Ihnen.
+                                Wir planen Windkraftprojekte mit Bedacht – für Jahrzehnte, genau wie unsere Partnerschaft mit Ihnen.
                             </p>
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -59,9 +59,7 @@ export default function WindkraftPage() {
                             { title: "Standortprüfung", text: "Kostenlose Prüfung Ihrer Fläche hinsichtlich Windpotenzial, Abstände und Netzanschluss." },
                             { title: "Genehmigungsverfahren", text: "Wir übernehmen alle behördlichen Schritte – von der Umweltverträglichkeit bis zur Baugenehmigung." },
                             { title: "Artenschutz", text: "Moderne Detektionssysteme und durchdachte Vermeidungsmaßnahmen für Vögel und Fledermäuse." },
-                            { title: "Faire Pachtverträge", text: "Transparente Konditionen mit Indexierung. Keine versteckten Klauseln, keine bösen Überraschungen." },
-                            { title: "Rückbaubürgschaft", text: "Bankübliche Sicherheiten für den vollständigen Rückbau – hinterlegt vor Baubeginn." },
-                            { title: "Langfristige Betreuung", text: "Monitoring, Wartung und persönlicher Ansprechpartner über die gesamte Laufzeit." },
+                            { title: "Faire Konditionen & langfristige Betreuung", text: "Transparente Verträge und persönliche Begleitung über die gesamte Laufzeit." },
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 items-start bg-white rounded-xl p-5">
                                 <CheckCircle2 size={20} className="text-primary mt-0.5 shrink-0" />
@@ -81,11 +79,8 @@ export default function WindkraftPage() {
                     <h2 className="text-2xl md:text-3xl font-serif font-bold text-earth mb-6">
                         Partnerschaft auf Augenhöhe
                     </h2>
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                        Deshalb sehen wir uns nicht nur als Projektierer, sondern als verlässlichen Partner der Region.
-                    </p>
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                        Transparenz von Tag eins, faire Verträge und regionale Wertschöpfung – das ist unser Versprechen.
+                        Wir sehen uns als verlässlicher Partner in der Region.
                     </p>
                 </div>
             </section>

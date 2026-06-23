@@ -65,7 +65,7 @@ export default function KontaktPage() {
                                         <div>
                                             <h3 className="font-semibold text-earth text-sm">Anschrift</h3>
                                             <p className="text-muted-foreground text-sm">
-                                                Alexander Gabler<br />
+                                                LEOGA GmbH<br />
                                                 Mozartstraße 2<br />
                                                 87435 Kempten
                                             </p>
