@@ -74,15 +74,9 @@ export default function DatenschutzPage() {
                         </div>
 
                         <div>
-                            <h2 className="text-lg font-semibold text-earth mb-3">5. E-Mail-Versand über Resend</h2>
-                            <p className="mb-3">
-                                Nachrichten aus unserem Kontaktformular werden über den Dienst Resend (Resend Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA) übermittelt. Resend verarbeitet dabei die in Abschnitt 4 genannten Daten als Auftragsverarbeiter in unserem Auftrag.
-                            </p>
+                            <h2 className="text-lg font-semibold text-earth mb-3">5. E-Mail-Versand</h2>
                             <p>
-                                Mit Resend besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Resend verarbeitet die Daten ausschließlich zur Zustellung der E-Mail und speichert diese nicht dauerhaft. Weitere Informationen:{" "}
-                                <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                                    resend.com/privacy
-                                </a>.
+                                Nachrichten aus unserem Kontaktformular werden über den Mailserver unseres Hosting-Anbieters STRATO AG (Otto-Ostrowski-Straße 7, 10249 Berlin) versendet. Die in Abschnitt 4 genannten Daten werden dabei ausschließlich zur Zustellung der E-Mail verarbeitet und nicht an Dritte weitergegeben.
                             </p>
                         </div>
 
