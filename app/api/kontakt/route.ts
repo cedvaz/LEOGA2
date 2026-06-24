@@ -1,34 +1,44 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   const { vorname, nachname, email, thema, nachricht } = await request.json();
 
   if (!vorname || !nachname || !email || !nachricht) {
     return NextResponse.json({ error: "Pflichtfelder fehlen." }, { status: 400 });
   }
 
-  const { error } = await resend.emails.send({
-    from: "LEOGA Kontaktformular <noreply@leoga.de>",
-    to: "info@leoga.de",
-    replyTo: email,
-    subject: `Neue Anfrage: ${thema} – ${vorname} ${nachname}`,
-    text: `Name: ${vorname} ${nachname}\nE-Mail: ${email}\nThema: ${thema}\n\n${nachricht}`,
-    html: `
-      <h2>Neue Kontaktanfrage über leoga.de</h2>
-      <p><strong>Name:</strong> ${vorname} ${nachname}</p>
-      <p><strong>E-Mail:</strong> ${email}</p>
-      <p><strong>Thema:</strong> ${thema}</p>
-      <hr />
-      <p><strong>Nachricht:</strong></p>
-      <p>${nachricht.replace(/\n/g, "<br/>")}</p>
-    `,
+  const transporter = nodemailer.createTransport({
+    host: "smtp.strato.de",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "info@leoga.de",
+      pass: process.env.SMTP_PASSWORD,
+    },
   });
 
-  if (error) {
-    console.error("[Resend Error]", JSON.stringify(error));
-    return NextResponse.json({ error: `Resend: ${error.message}` }, { status: 500 });
+  try {
+    await transporter.sendMail({
+      from: "LEOGA Kontaktformular <info@leoga.de>",
+      to: "info@leoga.de",
+      replyTo: email,
+      subject: `Neue Anfrage: ${thema} – ${vorname} ${nachname}`,
+      text: `Name: ${vorname} ${nachname}\nE-Mail: ${email}\nThema: ${thema}\n\n${nachricht}`,
+      html: `
+        <h2>Neue Kontaktanfrage über leoga.de</h2>
+        <p><strong>Name:</strong> ${vorname} ${nachname}</p>
+        <p><strong>E-Mail:</strong> ${email}</p>
+        <p><strong>Thema:</strong> ${thema}</p>
+        <hr />
+        <p><strong>Nachricht:</strong></p>
+        <p>${nachricht.replace(/\n/g, "<br/>")}</p>
+      `,
+    });
+  } catch (err) {
+    console.error("[SMTP Error]", err);
+    const message = err instanceof Error ? err.message : "Unbekannter Fehler";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 
   return NextResponse.json({ success: true });
