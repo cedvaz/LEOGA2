@@ -28,10 +28,10 @@ export default function WasserkraftPage() {
                                 Wasserkraft aus der <span className="text-primary">Region</span>
                             </h2>
                             <p className="text-muted-foreground leading-relaxed mb-4">
-                                Fließendes Wasser erzeugt verlässlich Strom – rund um die Uhr, wetterunabhängig und mit minimalem Eingriff in die Natur. LEOGA entwickelt Wasserkraftprojekte gemeinsam mit Grundstückseigentümern, die über geeignete Gewässer verfügen.
+                                Fließendes Wasser erzeugt verlässlich Strom – rund um die Uhr und wetterunabhängig. Unsere Wasserkraftwerke sind seit Jahrzehnten zuverlässig im Betrieb.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Wir übernehmen die gesamte Projektentwicklung – von der wasserrechtlichen Genehmigung bis zum laufenden Betrieb. Fair, stabil und nachhaltig.
+                                Wir betreiben bestehende Anlagen nachhaltig und effizient – mit Erfahrung aus über 50 Jahren.
                             </p>
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -57,9 +57,7 @@ export default function WasserkraftPage() {
                             { title: "Standortprüfung", text: "Analyse von Gewässer, Gefälle, Durchflussmenge und rechtlichen Rahmenbedingungen." },
                             { title: "Genehmigungsverfahren", text: "Wir übernehmen die wasserrechtliche Genehmigung und alle behördlichen Schritte." },
                             { title: "Ökologische Verträglichkeit", text: "Fischaufstieg, Mindestwasserführung und Umweltschutz sind fester Bestandteil unserer Planung." },
-                            { title: "Faire Pachtverträge", text: "Klare Konditionen mit Indexierung. Transparent von Anfang an." },
                             { title: "Technischer Betrieb", text: "Monitoring und Wartung über die gesamte Laufzeit – aus einer Hand." },
-                            { title: "Rückbaubürgschaft", text: "Vollständiger Rückbau nach Laufzeitende, vertraglich gesichert." },
                         ].map((item, i) => (
                             <div key={i} className="flex gap-4 items-start bg-cream rounded-xl p-5">
                                 <CheckCircle2 size={20} className="text-primary mt-0.5 shrink-0" />
@@ -76,9 +74,9 @@ export default function WasserkraftPage() {
             {/* CTA */}
             <section className="py-16 md:py-24 bg-primary">
                 <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
-                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Interesse an Wasserkraft?</h2>
+                    <h2 className="text-3xl font-serif font-bold text-white mb-6">Interesse?</h2>
                     <p className="text-white/80 mb-8 text-lg">
-                        Sprechen Sie mit uns – wir freuen uns auf den Austausch.
+                        Sprechen Sie uns an.
                     </p>
                     <Link
                         href="/kontakt"
