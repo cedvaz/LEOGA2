@@ -12,7 +12,7 @@ export default function DatenschutzPage() {
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-6 max-w-3xl">
                     <h1 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-4">Datenschutzerklärung</h1>
-                    <p className="text-muted-foreground mb-10">Stand: Juni 2025</p>
+                    <p className="text-muted-foreground mb-10">Stand: Juni 2026</p>
 
                     <div className="space-y-10 text-muted-foreground leading-relaxed">
 
