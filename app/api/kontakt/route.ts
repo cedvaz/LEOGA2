@@ -2,7 +2,20 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
-  const { vorname, nachname, email, thema, nachricht } = await request.json();
+  const { vorname, nachname, email, thema, nachricht, _hp, _t } = await request.json();
+
+  if (_hp) {
+    return NextResponse.json({ success: true });
+  }
+
+  if (typeof _t === "number" && _t < 3000) {
+    return NextResponse.json({ success: true });
+  }
+
+  const urlCount = (nachricht?.match(/https?:\/\//g) || []).length;
+  if (urlCount > 2) {
+    return NextResponse.json({ success: true });
+  }
 
   if (!vorname || !nachname || !email || !nachricht) {
     return NextResponse.json({ error: "Pflichtfelder fehlen." }, { status: 400 });

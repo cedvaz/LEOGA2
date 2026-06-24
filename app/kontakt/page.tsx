@@ -3,13 +3,15 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
 export default function KontaktPage() {
     const [formState, setFormState] = useState<FormState>("idle");
     const [datenschutz, setDatenschutz] = useState(false);
+    const [honeypot, setHoneypot] = useState("");
+    const loadedAt = useRef(Date.now());
     const [formData, setFormData] = useState({
         vorname: "",
         nachname: "",
@@ -32,7 +34,11 @@ export default function KontaktPage() {
             const res = await fetch("/api/kontakt", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    _hp: honeypot,
+                    _t: Date.now() - loadedAt.current,
+                }),
             });
             if (!res.ok) throw new Error();
             setFormState("success");
@@ -95,6 +101,10 @@ export default function KontaktPage() {
                                     </div>
                                 ) : (
                                     <form className="space-y-5" onSubmit={handleSubmit}>
+                                        <div className="absolute opacity-0 -z-10 pointer-events-none" aria-hidden="true" tabIndex={-1}>
+                                            <label>Website</label>
+                                            <input type="text" name="website" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
+                                        </div>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                             <div className="space-y-1.5">
                                                 <label className="text-sm font-medium text-earth">Vorname</label>
