@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-6 max-w-3xl">
                     <h1 className="text-3xl md:text-4xl font-serif font-bold text-earth mb-4">Datenschutzerklärung</h1>
-                    <p className="text-muted-foreground mb-10">Stand: Mai 2025</p>
+                    <p className="text-muted-foreground mb-10">Stand: Juni 2025</p>
 
                     <div className="space-y-10 text-muted-foreground leading-relaxed">
 
@@ -43,11 +43,14 @@ export default function DatenschutzPage() {
                             <p className="mb-3">
                                 Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Betrieb der Website).
                             </p>
-                            <p>
-                                Vercel hat sich zur Einhaltung des europäischen Datenschutzrechts verpflichtet. Weitere Informationen finden Sie in der Datenschutzerklärung von Vercel unter{" "}
+                            <p className="mb-3">
+                                <strong className="text-earth">Internationale Datenübermittlung:</strong> Vercel ist Teilnehmer des EU-U.S. Data Privacy Framework (DPF), das durch den Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023 als datenschutzrechtlich angemessen anerkannt wurde (Art. 45 DSGVO). Zusätzlich setzt Vercel Standardvertragsklauseln (SCCs) gemäß Art. 46 Abs. 2 lit. c DSGVO ein. Weitere Informationen:{" "}
                                 <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                                     vercel.com/legal/privacy-policy
                                 </a>.
+                            </p>
+                            <p>
+                                <strong className="text-earth">Schriftarten:</strong> Die auf dieser Website verwendeten Schriftarten werden lokal von unserem Server ausgeliefert. Es findet keine Verbindung zu externen Servern (z. B. Google) statt.
                             </p>
                         </div>
 
