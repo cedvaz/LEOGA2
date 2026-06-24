@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 
 export const metadata: Metadata = {
     title: "Datenschutzerklärung – LEOGA GmbH",
@@ -21,7 +22,7 @@ export default function DatenschutzPage() {
                                 LEOGA GmbH<br />
                                 Mozartstraße 2<br />
                                 87435 Kempten (Allgäu)<br />
-                                E-Mail: <a href="mailto:info@leoga.de" className="text-primary hover:underline">info@leoga.de</a>
+                                E-Mail: <ObfuscatedEmail className="text-primary hover:underline" />
                             </p>
                         </div>
 
@@ -120,7 +121,7 @@ export default function DatenschutzPage() {
                             </ul>
                             <p className="mt-4">
                                 Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{" "}
-                                <a href="mailto:info@leoga.de" className="text-primary hover:underline">info@leoga.de</a>
+                                <ObfuscatedEmail className="text-primary hover:underline" />
                             </p>
                         </div>
 

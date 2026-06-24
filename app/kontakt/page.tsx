@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useRef } from "react";
@@ -83,7 +84,7 @@ export default function KontaktPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-earth text-sm">E-Mail</h3>
-                                            <p className="text-muted-foreground text-sm">info@leoga.de</p>
+                                            <p className="text-muted-foreground text-sm"><ObfuscatedEmail link={false} /></p>
                                         </div>
                                     </div>
                                 </div>

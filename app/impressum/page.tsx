@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 
 export const metadata: Metadata = {
     title: "Impressum – LEOGA GmbH",
@@ -31,7 +32,7 @@ export default function ImpressumPage() {
 
                         <div>
                             <h2 className="text-lg font-semibold text-earth mb-3">Kontakt</h2>
-                            <p>E-Mail: <a href="mailto:info@leoga.de" className="text-primary hover:underline">info@leoga.de</a></p>
+                            <p>E-Mail: <ObfuscatedEmail className="text-primary hover:underline" /></p>
                         </div>
 
                         <div>

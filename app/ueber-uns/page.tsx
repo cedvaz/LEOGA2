@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Shield, Scale, Leaf, ArrowRight, Code, Zap, BarChart3, MapPin, Clock, Euro } from "lucide-react";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -215,7 +216,7 @@ export default function UeberUnsPage() {
                             Jetzt bewerben
                             <ArrowRight size={16} />
                         </Link>
-                        <p className="text-xs text-muted-foreground mt-4">Kurze Mail an info@leoga.de oder über unser Kontaktformular.</p>
+                        <p className="text-xs text-muted-foreground mt-4">Kurze Mail an <ObfuscatedEmail className="text-primary hover:underline" /> oder über unser Kontaktformular.</p>
                     </div>
                 </div>
             </section>

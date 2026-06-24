@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CookieSettingsLink } from "./CookieBanner";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 
 export function Footer() {
     return (
@@ -40,7 +41,7 @@ export function Footer() {
                     <div>
                         <h3 className="text-sm font-semibold text-accent mb-4 uppercase tracking-wider">Kontakt</h3>
                         <ul className="space-y-2.5 text-sm text-cream/60">
-                            <li>info@leoga.de</li>
+                            <li><ObfuscatedEmail className="hover:text-cream/80 transition-colors" /></li>
                             <li>Kempten, Bayern</li>
                         </ul>
                     </div>

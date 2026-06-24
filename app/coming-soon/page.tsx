@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 
 export const metadata: Metadata = {
     title: "Demnächst verfügbar – LEOGA",
@@ -51,12 +52,7 @@ export default function ComingSoonPage() {
 
                 <p className="mt-8 text-sm text-muted-foreground">
                     Bei Fragen:{" "}
-                    <a
-                        href="mailto:info@leoga.de"
-                        className="text-primary hover:underline"
-                    >
-                        info@leoga.de
-                    </a>
+                    <ObfuscatedEmail className="text-primary hover:underline" />
                 </p>
             </div>
         </div>
