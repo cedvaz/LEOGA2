@@ -15,7 +15,7 @@ export default function WasserkraftPage() {
             <SubpageHero
                 title="Wasserkraft"
                 subtitle="Energie aus fließendem Wasser. Regional verwurzelt, langfristig gedacht."
-                imageSrc="/pictures/kempten-wasserkraftwerk.jpg"
+                imageSrc="/pictures/Wasserkraft_2.webp"
                 imageAlt="Wasserkraftwerk im Allgäu"
             />
 
@@ -36,7 +36,7 @@ export default function WasserkraftPage() {
                         </div>
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                             <Image
-                                src="/pictures/alex_wasser.jpeg"
+                                src="/pictures/wasserkraft_1.webp"
                                 alt="Wasserkraftwerk im Allgäu"
                                 fill
                                 className="object-cover brightness-105"
